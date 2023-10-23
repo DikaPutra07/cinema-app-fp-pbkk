@@ -22,4 +22,14 @@ class Payment extends Model
     {
         return $this->hasMany(OrderBev::class);
     }
+
+    public function order_merches()
+    {
+        return $this->hasMany(OrderMerch::class);
+    }
+
+    public function rental_payments()
+    {
+        return $this->hasMany(RentalPayment::class);
+    }
 }
