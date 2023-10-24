@@ -5,30 +5,30 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Movie extends Model
+class MovieForRent extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title', 
-        'duration', 
-        'description', 
-        'rating', 
+        'title',
+        'duration',
+        'description',
+        'rating',
         'release_date',
         'maturity_rating',
         'language',
         'image',
-        'genre_id'
+        'rental_price',
     ];
+
+    public function movie_rentals()
+    {
+        return $this->hasMany(MovieRental::class);
+    }
 
     public function genre()
     {
         return $this->belongsTo(Genre::class);
-    }
-
-    public function shows()
-    {
-        return $this->hasMany(Show::class);
     }
 
     // case director > 1 dikit jadi 1 aja, actors many
