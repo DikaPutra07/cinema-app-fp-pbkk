@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $movies = Movie::all()->collect();
+    return view('dashboard', [
+        'top_movies' => $movies->sortByDesc('rating')->take(4),
+        'newest_movies' => $movies->sortByDesc('release_date')->take(8),
+    ]);
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
