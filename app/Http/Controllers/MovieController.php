@@ -18,7 +18,9 @@ class MovieController extends Controller
     public function detail(Movie $movie)
     {
         return view('movies.detail', [
-            'movie' => $movie
+            'movie' => $movie,
+            'recommendationsByGenre' => Movie::where('genre_id', $movie->genre_id)->where('id', '!=', $movie->id)->limit(4)->get()->collect(),
+            'recommendationsByRate' => Movie::where('id', '!=', $movie->id)->limit(4)->get()->collect()->sortByDesc('rating'),
         ]);
     }
 }

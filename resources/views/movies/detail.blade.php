@@ -27,8 +27,8 @@
                             <li>{{ $movie->maturity_rating }}</li>
                             <li>{{ $movie->duration }}
                             </li>
-                            <li>{{ $movie->genre_id }}</li>
-                            <li>{{ $movie->release_date }}</li>
+                            <li>{{ $movie->genre->name }}</li>
+                            <li>{{ date('d/m/Y', strtotime($movie->release_date)) }}</li>
                         </ul>
 
                         <a href="#reserve-now" class="btn btn-main btn-effect">Get tickets</a>
@@ -62,6 +62,11 @@
                             <h3 class="title">Storyline</h3>
 
                             <p>{{ $movie->description }}</p>
+                        </div>
+
+                        <!-- Cast -->
+                        <div class="storyline">
+                            <h3 class="title">Actors</h3>
                         </div>
 
                         <!-- Shows -->
@@ -98,7 +103,7 @@
                                 <li><strong>Maturity rating:
                                     </strong>{{ $movie->maturity_rating }}</li>
                                 <li><strong>Running time:
-                                    </strong>{{ $movie->duration }}
+                                    </strong>{{ $movie->duration }} Minutes
                                 </li>
                             </ul>
                         </aside>
@@ -112,5 +117,50 @@
         </div>
     </section>
     <!-- =============== END OF MOVIE DETAIL MAIN SECTION =============== -->
+
+    <!-- =============== START OF MOVIE RECOMENDATION SECTION =============== -->
+        <section class="recommended-movies bg-light ptb100">
+        <div class="container mb-5">
+
+            <!-- Start of row -->
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="title">Checkout the Highest Rated Movie </h2>
+                </div>
+            </div>
+            <!-- End of row -->
+
+
+            <!-- Start of Latest Movies Slider -->
+            <div class="owl-carousel recommended-slider mt20">
+                @each('components.movie-item-image', $recommendationsByRate, 'movie')
+            </div>
+            <!-- End of Latest Movies Slider -->
+
+            
+
+        </div>
+        <div class="container">
+
+            <!-- Start of row -->
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="title">People who liked {{ $movie->genre->name }} also liked...</h2>
+                </div>
+            </div>
+            <!-- End of row -->
+
+
+            <!-- Start of Latest Movies Slider -->
+            <div class="owl-carousel recommended-slider mt20">
+                @each('components.movie-item-image', $recommendationsByGenre, 'movie')
+            </div>
+            <!-- End of Latest Movies Slider -->
+
+            
+
+        </div>
+        
+    </section>
 
 @endsection

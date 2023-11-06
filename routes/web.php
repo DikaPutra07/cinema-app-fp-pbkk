@@ -35,8 +35,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(MovieController::class)->group(function () {
-    Route::get('/movies', [MovieController::class, 'index'])->name('movies-index');
-    Route::get('/movies/{movie}', [MovieController::class, 'detail'])->name('movie-detail');
+    Route::get('/movies', 'index')->name('movies-index');
+    Route::get('/movies/{movie}', 'detail')->name('movie-detail');
 });
 
 require __DIR__.'/auth.php';

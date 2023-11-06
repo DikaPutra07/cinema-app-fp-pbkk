@@ -4475,6 +4475,12 @@ ul.blog-posts-widget .blog-content .blog-text span {
     transform: scale(0);
 }
 
+.movie-box-1 .buttons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .movie-box-1:hover .buttons .play-video {
     opacity: 1;
     visibility: visible;
@@ -4494,9 +4500,9 @@ ul.blog-posts-widget .blog-content .blog-text span {
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-box-shadow: 0 0 0 10px rgba(147, 82, 179, .4);
-    -moz-box-shadow: 0 0 0 10px rgba(147, 82, 179, .4);
-    box-shadow: 0 0 0 10px rgba(147, 82, 179, .4);
+    -webkit-box-shadow: 0 0 0 10px rgba(34, 106, 12, 0.4);
+    -moz-box-shadow: 0 0 0 10px rgba(34, 106, 12, 0.4);
+    box-shadow: 0 0 0 10px rgba(34, 106, 12, 0.4);
 }
 
 
