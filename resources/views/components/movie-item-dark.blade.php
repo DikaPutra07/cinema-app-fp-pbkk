@@ -34,7 +34,7 @@
                 <div class="inner">
                     <h2 class="title">{{ $movie->title }}</h2>
 
-                    <a href="#" class="btn btn-main btn-effect">details</a>
+                    <a href="{{ route('movie-detail', $movie->id) }}" class="btn btn-main btn-effect">DETAILS</a>
                 </div>
             </div>
 

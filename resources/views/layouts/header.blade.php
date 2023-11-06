@@ -10,7 +10,7 @@
         <!-- ====== Start of Navbar ====== -->
         <nav class="navbar navbar-expand-lg">
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href={{ route('home') }}>
                 <!-- INSERT YOUR LOGO HERE -->
                 <img src="{{ asset('images/logos/logo-white.png') }}" alt="logo" width="250" class="logo">
                 <!-- INSERT YOUR WHITE LOGO HERE -->
@@ -40,12 +40,12 @@
                 <ul class="navbar-nav mx-auto" id="main-menu">
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">My Profile</a>
                     </li>
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Movies</a>
+                        <a class="nav-link" href={{ route('movies-index') }}>Movies</a>
                     </li>
 
                     <!-- Menu Item -->

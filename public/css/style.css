@@ -5442,8 +5442,8 @@ main .col-md-12:last-of-type .movie-list-2 {
     left: 0;
 }
 
-.movie-detail-intro .rating i,
-.movie-detail-intro2 .rating i {
+.movie-detail-intro .rating svg,
+.movie-detail-intro2 .rating svg {
     color: #ffc741;
 }
 

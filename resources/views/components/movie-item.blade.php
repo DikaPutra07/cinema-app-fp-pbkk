@@ -33,7 +33,7 @@
 
                     <p>{{ Str::limit($movie->description, 150, '...') }}</p>
 
-                    <a href="#" class="btn btn-main btn-effect">details</a>
+                    <a href="{{ route('movie-detail', $movie->id) }}" class="btn btn-main btn-effect">details</a>
                 </div>
             </div>
 
