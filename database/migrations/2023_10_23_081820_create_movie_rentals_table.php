@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamp('rented_at')->useCurrent();
             $table->timestamp('returned_at')->nullable(); // rented_at + 30 days
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('movie_id')->constrained('movie_for_rents')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
