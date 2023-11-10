@@ -108,7 +108,7 @@
                                     </strong>{{ date('d/m/Y', strtotime($movie->release_date)) }}
                                 </li>
                                 <li><strong>Director:
-                                    </strong>{{ $movie->director }}</li>
+                                    </strong>{{ $movie->director->name }}</li>
                                 <li><strong>Language:
                                     </strong>{{ $movie->language }}</li>
                                 <li><strong>Maturity rating:

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('language');
             $table->string('image');
             $table->foreignId('genre_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('director_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

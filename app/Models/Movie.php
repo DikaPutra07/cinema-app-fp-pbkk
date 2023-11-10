@@ -18,7 +18,8 @@ class Movie extends Model
         'maturity_rating',
         'language',
         'image',
-        'genre_id'
+        'genre_id',
+        'director_id'
     ];
 
     public function genre()
