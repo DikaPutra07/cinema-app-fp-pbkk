@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     @foreach ($movies as $movie)
-    <div class="col-md-4">
+    <div class="col-md-4 my-4">
       <div class="card">
         <img class="card-img-top" src="{{ $movie->image }}" alt="{{ $movie->title }}">
         <div class="card-body">

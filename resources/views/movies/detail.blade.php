@@ -25,8 +25,7 @@
 
                         <ul class="movie-subtext">
                             <li>{{ $movie->maturity_rating }}</li>
-                            <li>{{ $movie->duration }}
-                            </li>
+                            <li>{{ $movie->duration }}</li>
                             <li>{{ $movie->genre->name }}</li>
                             <li>{{ date('d/m/Y', strtotime($movie->release_date)) }}</li>
                         </ul>
@@ -67,6 +66,18 @@
                         <!-- Cast -->
                         <div class="storyline">
                             <h3 class="title">Actors</h3>
+                            <div class="row">
+                                @foreach ($movie->actors as $actor)
+                                    <div class="col-md-3">
+                                        <div class="card" style="width: 100%;">
+                                            <img class="card-img-top" src="{{ $actor->image }}" alt="{{ $actor->name }}">
+                                            <div class="card-body">
+                                                <p class="card-title" style="font-weight: bold">{{ $actor->name }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
 
                         <!-- Shows -->

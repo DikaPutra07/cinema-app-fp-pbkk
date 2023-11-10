@@ -65,7 +65,419 @@ class DatabaseSeeder extends Seeder
             'name' => 'Hugo Weaving',
             'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg'
         ]);
-        
+        Actor::create([
+            'name' => 'Elijah Wood',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7UKRbJBNG7mxBl2QQc5XsAh6F8B.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sean Astin',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/5oJzy6Ra0tuMEV7mfxjtqye5qUX.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ian McKellen',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/coWjgMEYJjk2OrNddlXCBm8EIr3.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Viggo Mortensen',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/vH5gVSpHAMhDaFWfh0Q7BG61O1y.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Clint Eastwood',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/dU35NnjZ4aGw5abIJe3WXVf3Eey.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Eli Wallach',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/880EvYjyIG9BcrM3Jfof0QofmRe.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Lee Van Cleef',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/yQc5wjNCdRZzPp5E2wRPRYsEq9a.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Aldo Giuffrè',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/aT6eECl1R3YGYL4KatyIQrq0zG8.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jonah Hill',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hoise4R82zsMdxhy0nIuwaR8tdh.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Michael Cera',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lFKyW2C7xj7X4nWpOEbVIDGOKrH.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Christopher Mintz-Plasse',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/c0F9poXsVicoiVQZ9jpau2upxOw.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Bill Hader',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/50FpKsWiyqbZxu0oLBAGbWn7wag.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Bradley Cooper',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/33isXOQ7RH6ca2nJgvLm4Fs7ZWL.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ed Helms',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPZ8tZaNQGAc3KZRIPp9rgGbEnN.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Zach Galifianakis',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qsDfoUlRnXHUiqZeBPWHzmgmKGX.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Justin Bartha',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/AalKjN8nR8RZ8g6ZdWV2smnQq4d.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Margot Robbie',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ryan Gosling',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg'
+        ]);
+        Actor::create([
+            'name' => 'America Ferrera',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/dhiUliLE7dFaqj5BKNQ6x7Wm9uR.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Kate McKinnon',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/2cNetzianFcxPQbyOQnkAIkKUZE.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Antonio Banderas',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/n8YlGookYzgD3cmpMP45BYRNIoh.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Salma Hayek Pinault',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/u4AR1MJnanaauWcQrzV15UyABb3.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Harvey Guillén',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/yiNBonobPwqMVweB02JWufzp2l9.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Wagner Moura',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/yJjV1ZCQbCSSgRy05FncCKjyaY4.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Anna Faris',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/y3YKNr4qPPJZ9w4lR2a3yySKotd.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jon Abrahams',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lB4qv4fTjP02m7w19TFXc29yLUd.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Marlon Wayans',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8IsUn3C19U9b7VtLvUDMfMVnhWG.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Shawn Wayans',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Cat25uXhB680QLmvg9Tu16W563.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Tim Robbins',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/A4fHNLX73EQs78f2G6ObfKZnvp4.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Morgan Freeman',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/jPsLqiYGSofU4s6BjrxnefMfabb.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Bob Gunton',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rr2KDCKK4t0f5YhZibCpLCAsJxc.jpg'
+        ]);
+        Actor::create([
+            'name' => 'William Sadler',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rWeb2kjYCA7V9MC9kRwRpm57YoY.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Tom Hanks',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Robin Wright',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hpx0mJQrusrOWG78LHveL8NT2iV.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Gary Sinise',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ngYV91xYfCu0JNcSxJ4yQ7tzOna.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sally Field',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/5fBK36MdmdwQQMuP0W70rXADXih.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Cillian Murphy',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/llkbyWKwpfowZ6C8peBjIV9jj99.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Emily Blunt',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nPJXaRMvu1vh3COG16GzmdsBySQ.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Matt Damon',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Robert Downey Jr.',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/im9SAqJPZKEbVZGmjXuLI4O7RvM.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Matthew McConaughey',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/e9ZHRY5toiBZCIPEEyvOG9A8ers.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Anne Hathaway',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jessica Chastain',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9bVDmu6r5PYc4xhgs5vtUQr9yUw.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Harrison Ford',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zVnHagUvXkR2StdOtquEwsiwSVt.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ana de Armas',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3vxvsmYLTf4jnr163SUlBIw51ee.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sylvia Hoeks',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/envfC7U1yPkjP6bQidyfCVPzyJu.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Marlon Brando',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fuTEPMsBtV1zE98ujPONbKiYDc2.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Al Pacino',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/2dGBb1fOcNdZjtQToVPFxXjm4ke.jpg'
+        ]);
+        Actor::create([
+            'name' => 'James Caan',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/v3flJtQEyczxENi29yJyvnN6LVt.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Robert Duvall',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/86rJfMFHBB9J4mUHomSPsOLH0Za.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Diane Keaton',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/siSWRRFN9uO6iCN7y9OrHU5IaJ.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Robert De Niro',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7v2srE6gWIFPeazyDAw1hAbcuWW.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Albert Brooks',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8iDSGu5l93N7benjf6b3AysBore.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ellen DeGeneres',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/z8IEEid4z63CBlJtxrTKEfsW7NA.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Alexander Gould',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fe4mUSp0XotA6Ku4Bs69Q9o2lqU.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Willem Dafoe',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Chiwetel Ejiofor',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg'
+        ]);
+        Actor::create([
+            'name' => 'John Oliver',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wI7LRInWUT3RgCByYx69wRMqgsy.jpg'
+        ]);
+        Actor::create([
+            'name' => 'James Earl Jones',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/oqMPIsXrl9SZkRfIKN08eFROmH6.jpg'
+        ]);
+        Actor::create([
+            'name' => 'John Kani',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/g7tqg3q128a5O2qXMCwVnXsow9I.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Craig T. Nelson',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rMh8qdexFKmc7mq7oLzsLLvCCjs.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Holly Hunter',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kC7KX03VAWvogOCuwKbMo4V6TuU.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sarah Vowell',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7jWxVRciFDGPOBUOU2Rc7vc6A89.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Spencer Fox',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/vMyWK5qZWEG0GZh4FXCDXx4Jqfm.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Patrick Wilson',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tc1ezEfIY8BhCy85svOUDtpBFPt.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Vera Farmiga',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zpdjQwP68TCVjg4eumyPSi3Z13p.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Lili Taylor',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/if8rbaj1TXlzg0Oq4g0bpU3b5rh.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Ron Livingston',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/pr5CjWnkaf5WKTIYh8wtNufjmyb.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Tobin Bell',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/q21uuCtTioIVcGc3a1Q0DpdcNMO.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Shawnee Smith',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/s2Ouz4b7xqDH72aU48TSW5zS40v.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Synnøve Macody Lund',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/a5r4MtoL5jU4DtCp0BtzwEAtfyL.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Steven Brand',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/oWkitw5jzILwb775CVGjsqMSrqz.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Lily Sullivan',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/sLjxpxV2JX8k3k9VWoIPrzqlh5J.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Alyssa Sutherland',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/femjkNZ7jTbcwz6LjoQQyRD5Mlc.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Morgan Davies',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fVApDiO0yWZZfQeprxDDfAukngO.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Gabrielle Echols',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/1f7Yk5VU2NsY5hZ4cqf4PxnZqdd.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Taissa Farmiga',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kC2Movbs6uEF8DdDhvyHizQHuru.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Demián Bichir',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/sw8TqPQLbMMgLbkNNUIW649THWJ.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Bonnie Aarons',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iEtWuoXKx4ZKbIWwJp1V76Heavy.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jonas Bloquet',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/pzQAv6ghx5hc4gSpxHII0oUzqkL.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sosie Bacon',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hMsjirweIK9wGuy49l52b8SnLuv.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Kyle Gallner',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/v7wfYXfakHyeNudiATORtlQ6mny.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Caitlin Stasey',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/uJW62qSjIyI0OP30s5U8KLlDw32.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jessie T. Usher',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/igRE9td7cO3j8YFMO7t1QrHYFxG.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Rachel McAdams',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/oxhG2XVJpC2tqKcNR3wfAvh71mT.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Gena Rowlands',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7Hda4UFbmpufKnk48KpBuH7j05j.jpg'
+        ]);
+        Actor::create([
+            'name' => 'James Garner',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hiPky3VwIOAlmPhJwzRovEsGDrI.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Leonardo DiCaprio',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Kate Winslet',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zIiU5mOcinbkpHWCxuDigucsyZC.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Billy Zane',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9HIubetYWAVLlHNb9aObL0fc0sT.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Kathy Bates',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3MsayDvY73uXGVbCFHyy1ABTacV.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Emma Watson',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tvPPRGzAzdQFhlKzLbMO1EpuTJI.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Dan Stevens',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fFsgginZKH527o38ZfdDxuzx7Ew.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Luke Evans',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qUkYJcrDc4M0LHNYASs30luFvw0.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Josh Gad',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/17iKlfWZBDTAucqjkhRKHr9xjIz.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Hero Fiennes Tiffin',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/vNdScND38ytcV4tKEdu3cnGZgSe.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Josephine Langford',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rxQIrvUN1NGHkqSKHug1hoHTUNi.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Mimi Keene',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7bUgfaycm0f6PgEn3eLo8oANByO.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Stephen Moyer',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xprwOCXa2cNkjhrGtcJp0VfJMlZ.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Emilia Clarke',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wb8VfDPGpyqcFltnRcJR1Wj3h4Z.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Sam Claflin',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/e5CU4tjCNZFfm7ITmZfzjZse2Bb.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Janet McTeer',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qOKAI6aunD4J5MXiwwomAhI3jI2.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Charles Dance',
+            'image' => 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/2T2tH6EJjgP8aGevWogwfYr26QQ.jpg'
+        ]);
+
         $genre = Genre::all();
         // Action Movies
         Movie::create([
@@ -80,6 +492,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg',
             'genre_id' => $genre->where('name', 'Action')->first()->id,
         ]);
+        $movie = Movie::find(1);
+        $movie->actors()->attach([
+            Actor::where('name', 'Christian Bale')->first()->id,
+            Actor::where('name', 'Heath Ledger')->first()->id,
+            Actor::where('name', 'Michael Caine')->first()->id,
+            Actor::where('name', 'Gary Oldman')->first()->id,
+        ]); 
         Movie::create([
             // 2 John Wick
             'title' => 'John Wick',
@@ -91,6 +510,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg',
             'genre_id' => $genre->where('name', 'Action')->first()->id,
+        ]);
+        $movie = Movie::find(2);
+        $movie->actors()->attach([
+            Actor::where('name', 'Keanu Reeves')->first()->id,
+            Actor::where('name', 'Michael Nyqvist')->first()->id,
+            Actor::where('name', 'Ian McShane')->first()->id,
+            Actor::where('name', 'John Leguizamo')->first()->id,
         ]);
         Movie::create([
             // 3 The Matrix
@@ -104,6 +530,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg',
             'genre_id' => $genre->where('name', 'Action')->first()->id,
         ]);
+        $movie = Movie::find(3);
+        $movie->actors()->attach([
+            Actor::where('name', 'Keanu Reeves')->first()->id,
+            Actor::where('name', 'Laurence Fishburne')->first()->id,
+            Actor::where('name', 'Carrie-Anne Moss')->first()->id,
+            Actor::where('name', 'Hugo Weaving')->first()->id,
+        ]);
         Movie::create([
             // 4 The Lord of the Rings: The Return of the King
             'title' => 'The Lord of the Rings: The Return of the King',
@@ -116,6 +549,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg',
             'genre_id' => $genre->where('name', 'Action')->first()->id,
         ]);
+        $movie = Movie::find(4);
+        $movie->actors()->attach([
+            Actor::where('name', 'Elijah Wood')->first()->id,
+            Actor::where('name', 'Sean Astin')->first()->id,
+            Actor::where('name', 'Ian McKellen')->first()->id,
+            Actor::where('name', 'Viggo Mortensen')->first()->id,
+        ]);
         Movie::create([
             // 5 The Good, the Bad and the Ugly
             'title' => 'The Good, the Bad and the Ugly',
@@ -127,6 +567,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg',
             'genre_id' => $genre->where('name', 'Action')->first()->id,
+        ]);
+        $movie = Movie::find(5);
+        $movie->actors()->attach([
+            Actor::where('name', 'Clint Eastwood')->first()->id,
+            Actor::where('name', 'Eli Wallach')->first()->id,
+            Actor::where('name', 'Lee Van Cleef')->first()->id,
+            Actor::where('name', 'Aldo Giuffrè')->first()->id,
         ]);
 
         // Comedy Movies
@@ -142,6 +589,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aqr4CdX6eeA5UkVAJzKZMs7FeEw.jpg',
             'genre_id' => $genre->where('name', 'Comedy')->first()->id,
         ]);
+        $movie = Movie::find(6);
+        $movie->actors()->attach([
+            Actor::where('name', 'Jonah Hill')->first()->id,
+            Actor::where('name', 'Michael Cera')->first()->id,
+            Actor::where('name', 'Christopher Mintz-Plasse')->first()->id,
+            Actor::where('name', 'Bill Hader')->first()->id,
+        ]);
         Movie::create([
             // 7 The Hangover
             'title' => 'The Hangover',
@@ -153,6 +607,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uluhlXubGu1VxU63X9VHCLWDAYP.jpg',
             'genre_id' => $genre->where('name', 'Comedy')->first()->id,
+        ]);
+        $movie = Movie::find(7);
+        $movie->actors()->attach([
+            Actor::where('name', 'Bradley Cooper')->first()->id,
+            Actor::where('name', 'Ed Helms')->first()->id,
+            Actor::where('name', 'Zach Galifianakis')->first()->id,
+            Actor::where('name', 'Justin Bartha')->first()->id,
         ]);
         Movie::create([
             // 8  Barbie
@@ -166,6 +627,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yBvoDlzpKx9HRk2Pcp8gc0E6SYP.jpg',
             'genre_id' => $genre->where('name', 'Comedy')->first()->id,
         ]);
+        $movie = Movie::find(8);
+        $movie->actors()->attach([
+            Actor::where('name', 'Margot Robbie')->first()->id,
+            Actor::where('name', 'Ryan Gosling')->first()->id,
+            Actor::where('name', 'America Ferrera')->first()->id,
+            Actor::where('name', 'Kate McKinnon')->first()->id,
+        ]);
         Movie::create([
             // 9 Puss in Boots: The Last Wish
             'title' => 'Puss in Boots: The Last Wish',
@@ -177,6 +645,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kuf6dutpsT0vSVehic3EZIqkOBt.jpg',
             'genre_id' => $genre->where('name', 'Comedy')->first()->id,
+        ]);
+        $movie = Movie::find(9);
+        $movie->actors()->attach([
+            Actor::where('name', 'Antonio Banderas')->first()->id,
+            Actor::where('name', 'Salma Hayek Pinault')->first()->id,
+            Actor::where('name', 'Harvey Guillén')->first()->id,
+            Actor::where('name', 'Wagner Moura')->first()->id,
         ]);
         Movie::create([
             // 10 Scary Movie
@@ -190,10 +665,17 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lRQiJXETkCnVVurHmglNvMXrZOx.jpg',
             'genre_id' => $genre->where('name', 'Comedy')->first()->id,
         ]);
+        $movie = Movie::find(10);
+        $movie->actors()->attach([
+            Actor::where('name', 'Anna Faris')->first()->id,
+            Actor::where('name', 'Jon Abrahams')->first()->id,
+            Actor::where('name', 'Marlon Wayans')->first()->id,
+            Actor::where('name', 'Shawn Wayans')->first()->id,
+        ]);
 
         // Drama Movies
         Movie::create([
-            // 11 Shawshank Redemption
+            // 11 The Shawshank Redemption
             'title' => 'The Shawshank Redemption',
             'description' => 'Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.',
             'duration' => 142,
@@ -203,6 +685,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg',
             'genre_id' => $genre->where('name', 'Drama')->first()->id,
+        ]);
+        $movie = Movie::find(11);
+        $movie->actors()->attach([
+            Actor::where('name', 'Tim Robbins')->first()->id,
+            Actor::where('name', 'Morgan Freeman')->first()->id,
+            Actor::where('name', 'Bob Gunton')->first()->id,
+            Actor::where('name', 'William Sadler')->first()->id,
         ]);
         Movie::create([
             // 12 Forest Gump
@@ -216,6 +705,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg',
             'genre_id' => $genre->where('name', 'Drama')->first()->id,
         ]);
+        $movie = Movie::find(12);
+        $movie->actors()->attach([
+            Actor::where('name', 'Tom Hanks')->first()->id,
+            Actor::where('name', 'Robin Wright')->first()->id,
+            Actor::where('name', 'Gary Sinise')->first()->id,
+            Actor::where('name', 'Sally Field')->first()->id,
+        ]);
         Movie::create([
             // 13 Oppenheimer
             'title' => 'Oppenheimer',
@@ -227,6 +723,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg',
             'genre_id' => $genre->where('name', 'Drama')->first()->id,
+        ]);
+        $movie = Movie::find(13);
+        $movie->actors()->attach([
+            Actor::where('name', 'Cillian Murphy')->first()->id,
+            Actor::where('name', 'Emily Blunt')->first()->id,
+            Actor::where('name', 'Matt Damon')->first()->id,
+            Actor::where('name', 'Robert Downey Jr.')->first()->id,
         ]);
         Movie::create([
             // 14 Interstellar
@@ -240,6 +743,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
             'genre_id' => $genre->where('name', 'Drama')->first()->id,
         ]);
+        $movie = Movie::find(14);
+        $movie->actors()->attach([
+            Actor::where('name', 'Matthew McConaughey')->first()->id,
+            Actor::where('name', 'Anne Hathaway')->first()->id,
+            Actor::where('name', 'Jessica Chastain')->first()->id,
+            Actor::where('name', 'Michael Caine')->first()->id,
+        ]);
         Movie::create([
             // 15 Blade Runner 2049
             'title' => 'Blade Runner 2049',
@@ -251,6 +761,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg',
             'genre_id' => $genre->where('name', 'Drama')->first()->id,
+        ]);
+        $movie = Movie::find(15);
+        $movie->actors()->attach([
+            Actor::where('name', 'Ryan Gosling')->first()->id,
+            Actor::where('name', 'Harrison Ford')->first()->id,
+            Actor::where('name', 'Ana de Armas')->first()->id,
+            Actor::where('name', 'Sylvia Hoeks')->first()->id,
         ]);
 
         // Family Movies
@@ -266,6 +783,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg',
             'genre_id' => $genre->where('name', 'Family')->first()->id,
         ]);
+        $movie = Movie::find(16);
+        $movie->actors()->attach([
+            Actor::where('name', 'Marlon Brando')->first()->id,
+            Actor::where('name', 'Al Pacino')->first()->id,
+            Actor::where('name', 'James Caan')->first()->id,
+            Actor::where('name', 'Robert Duvall')->first()->id,
+        ]);
         Movie::create([
             // 17 The Godfather: Part II
             'title' => 'The Godfather: Part II',
@@ -277,6 +801,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg',
             'genre_id' => $genre->where('name', 'Family')->first()->id,
+        ]);
+        $movie = Movie::find(17);
+        $movie->actors()->attach([
+            Actor::where('name', 'Al Pacino')->first()->id,
+            Actor::where('name', 'Robert Duvall')->first()->id,
+            Actor::where('name', 'Diane Keaton')->first()->id,
+            Actor::where('name', 'Robert De Niro')->first()->id,
         ]);
         Movie::create([
             // 18 Finding Nemo
@@ -290,6 +821,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggQ6o8X5984OCh3kZi2UIJQJY5y.jpg',
             'genre_id' => $genre->where('name', 'Family')->first()->id,
         ]);
+        $movie = Movie::find(18);
+        $movie->actors()->attach([
+            Actor::where('name', 'Albert Brooks')->first()->id,
+            Actor::where('name', 'Ellen DeGeneres')->first()->id,
+            Actor::where('name', 'Alexander Gould')->first()->id,
+            Actor::where('name', 'Willem Dafoe')->first()->id,
+        ]);
         Movie::create([
             // 19 The Lion King
             'title' => 'The Lion King',
@@ -302,6 +840,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg',
             'genre_id' => $genre->where('name', 'Family')->first()->id,
         ]);
+        $movie = Movie::find(19);
+        $movie->actors()->attach([
+            Actor::where('name', 'Chiwetel Ejiofor')->first()->id,
+            Actor::where('name', 'John Oliver')->first()->id,
+            Actor::where('name', 'James Earl Jones')->first()->id,
+            Actor::where('name', 'John Kani')->first()->id,
+        ]);
         Movie::create([
             // 20 The Incredibles
             'title' => 'The Incredibles',
@@ -313,6 +858,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg',
             'genre_id' => $genre->where('name', 'Family')->first()->id,
+        ]);
+        $movie = Movie::find(20);
+        $movie->actors()->attach([
+            Actor::where('name', 'Craig T. Nelson')->first()->id,
+            Actor::where('name', 'Holly Hunter')->first()->id,
+            Actor::where('name', 'Sarah Vowell')->first()->id,
+            Actor::where('name', 'Spencer Fox')->first()->id,
         ]);
 
         // Horror Movies
@@ -328,6 +880,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wVYREutTvI2tmxr6ujrHT704wGF.jpg',
             'genre_id' => $genre->where('name', 'Horror')->first()->id,
         ]);
+        $movie = Movie::find(21);
+        $movie->actors()->attach([
+            Actor::where('name', 'Patrick Wilson')->first()->id,
+            Actor::where('name', 'Vera Farmiga')->first()->id,
+            Actor::where('name', 'Lili Taylor')->first()->id,
+            Actor::where('name', 'Ron Livingston')->first()->id,
+        ]);
         Movie::create([
             // 22 Saw X
             'title' => 'Saw X',
@@ -339,6 +898,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aQPeznSu7XDTrrdCtT5eLiu52Yu.jpg',
             'genre_id' => $genre->where('name', 'Horror')->first()->id,
+        ]);
+        $movie = Movie::find(22);
+        $movie->actors()->attach([
+            Actor::where('name', 'Tobin Bell')->first()->id,
+            Actor::where('name', 'Shawnee Smith')->first()->id,
+            Actor::where('name', 'Synnøve Macody Lund')->first()->id,
+            Actor::where('name', 'Steven Brand')->first()->id,
         ]);
         Movie::create([
             // 23 Evil Dead Rise
@@ -352,6 +918,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg',
             'genre_id' => $genre->where('name', 'Horror')->first()->id,
         ]);
+        $movie = Movie::find(23);
+        $movie->actors()->attach([
+            Actor::where('name', 'Lily Sullivan')->first()->id,
+            Actor::where('name', 'Alyssa Sutherland')->first()->id,
+            Actor::where('name', 'Morgan Davies')->first()->id,
+            Actor::where('name', 'Gabrielle Echols')->first()->id,
+        ]);
         Movie::create([
             // 24 The Nun
             'title' => 'The Nun',
@@ -364,6 +937,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sFC1ElvoKGdHJIWRpNB3xWJ9lJA.jpg',
             'genre_id' => $genre->where('name', 'Horror')->first()->id,
         ]);
+        $movie = Movie::find(24);
+        $movie->actors()->attach([
+            Actor::where('name', 'Taissa Farmiga')->first()->id,
+            Actor::where('name', 'Demián Bichir')->first()->id,
+            Actor::where('name', 'Bonnie Aarons')->first()->id,
+            Actor::where('name', 'Jonas Bloquet')->first()->id,
+        ]);
         Movie::create([
             // 25 Smile
             'title' => 'Smile',
@@ -375,6 +955,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg',
             'genre_id' => $genre->where('name', 'Horror')->first()->id,
+        ]);
+        $movie = Movie::find(25);
+        $movie->actors()->attach([
+            Actor::where('name', 'Sosie Bacon')->first()->id,
+            Actor::where('name', 'Kyle Gallner')->first()->id,
+            Actor::where('name', 'Caitlin Stasey')->first()->id,
+            Actor::where('name', 'Jessie T. Usher')->first()->id,
         ]);
 
         // Romance Movies
@@ -390,6 +977,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg',
             'genre_id' => $genre->where('name', 'Romance')->first()->id,
         ]);
+        $movie = Movie::find(26);
+        $movie->actors()->attach([
+            Actor::where('name', 'Rachel McAdams')->first()->id,
+            Actor::where('name', 'Ryan Gosling')->first()->id,
+            Actor::where('name', 'Gena Rowlands')->first()->id,
+            Actor::where('name', 'James Garner')->first()->id,
+        ]);
         Movie::create([
             // 27 Titanic
             'title' => 'Titanic',
@@ -401,6 +995,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg',
             'genre_id' => $genre->where('name', 'Romance')->first()->id,
+        ]);
+        $movie = Movie::find(27);
+        $movie->actors()->attach([
+            Actor::where('name', 'Leonardo DiCaprio')->first()->id,
+            Actor::where('name', 'Kate Winslet')->first()->id,
+            Actor::where('name', 'Billy Zane')->first()->id,
+            Actor::where('name', 'Kathy Bates')->first()->id,
         ]);
         Movie::create([
             // 28 Beauty and the Beast
@@ -414,6 +1015,13 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hKegSKIDep2ewJWPUQD7u0KqFIp.jpg',
             'genre_id' => $genre->where('name', 'Romance')->first()->id,
         ]);
+        $movie = Movie::find(28);
+        $movie->actors()->attach([
+            Actor::where('name', 'Emma Watson')->first()->id,
+            Actor::where('name', 'Dan Stevens')->first()->id,
+            Actor::where('name', 'Luke Evans')->first()->id,
+            Actor::where('name', 'Josh Gad')->first()->id,
+        ]);
         Movie::create([
             // 29 After Everything
             'title' => 'After Everything',
@@ -425,6 +1033,13 @@ class DatabaseSeeder extends Seeder
             'language' => 'English',
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uQxjZGU6rxSPSMeAJPJQlmfV3ys.jpg',
             'genre_id' => $genre->where('name', 'Romance')->first()->id,
+        ]);
+        $movie = Movie::find(29);
+        $movie->actors()->attach([
+            Actor::where('name', 'Hero Fiennes Tiffin')->first()->id,
+            Actor::where('name', 'Josephine Langford')->first()->id,
+            Actor::where('name', 'Mimi Keene')->first()->id,
+            Actor::where('name', 'Stephen Moyer')->first()->id,
         ]);
         Movie::create([
             // 30 Me Before You
@@ -438,6 +1053,12 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Ia3dzj5LnCj1ZBdlVeJrbKJQxG.jpg',
             'genre_id' => $genre->where('name', 'Romance')->first()->id,
         ]);
+        $movie = Movie::find(30);
+        $movie->actors()->attach([
+            Actor::where('name', 'Emilia Clarke')->first()->id,
+            Actor::where('name', 'Sam Claflin')->first()->id,
+            Actor::where('name', 'Janet McTeer')->first()->id,
+            Actor::where('name', 'Charles Dance')->first()->id,
+        ]);
     }
 }
-
