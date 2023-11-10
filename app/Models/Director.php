@@ -12,10 +12,6 @@ class Director extends Model
         'name'
     ];
 
-    public function movie_for_rents(){
-        return $this->hasMany(MovieForRent::class);
-    }
-
     public function movies(){
         return $this->hasMany(Movie::class);
     }

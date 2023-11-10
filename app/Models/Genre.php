@@ -14,9 +14,4 @@ class Genre extends Model
     {
         return $this->hasMany(Movie::class);
     }
-
-    public function movie_for_rents()
-    {
-        return $this->hasMany(MovieForRent::class);
-    }
 }

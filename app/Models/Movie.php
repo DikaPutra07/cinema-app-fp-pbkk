@@ -31,7 +31,6 @@ class Movie extends Model
         return $this->hasMany(Show::class);
     }
 
-    // case director > 1 dikit jadi 1 aja, actors many
     public function director()
     {
         return $this->belongsTo(Director::class);
