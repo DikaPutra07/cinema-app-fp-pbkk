@@ -68,7 +68,7 @@
                             <h3 class="title">Actors</h3>
                             <div class="row">
                                 @foreach ($movie->actors as $actor)
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 d-flex align-items-stretch">
                                         <div class="card" style="width: 100%;">
                                             <img class="card-img-top" src="{{ $actor->image }}" alt="{{ $actor->name }}">
                                             <div class="card-body">

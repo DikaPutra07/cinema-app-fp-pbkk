@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::all()->collect();
+        $movies = Movie::all();
+        foreach ($movies as $movie) {
+            $movie->description = Str::limit($movie->description, 150, '...');
+        }
         return view('movies.index',[
                 'movies' => $movies,
-            ]);
+        ]);
     }
 
     public function detail(Movie $movie)
