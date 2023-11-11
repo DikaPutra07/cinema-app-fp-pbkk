@@ -26,7 +26,7 @@
                     <div class="stars">
                         <div class="rating">
                             <i class="fa fa-star"></i>
-                            <span>{{ number_format($movie->rating,1) }}/5</span>
+                            <span>{{ number_format(($movie->rating*0.5), 1) }}/5</span>
                             <span class="category">{{ $movie->category }}</span>
                         </div>
                     </div>
