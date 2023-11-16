@@ -11,12 +11,12 @@
 
                     <!-- Play Button -->
                     <div class="play-btn">
-                        <a href="{{ route('movies.show', $movie->id) }}" class="play-video">
+                        <a href="{{ route('movie-detail', $movie->id) }}" class="play-video">
                             <i class="fa fa-ticket"></i>
                         </a>
                     </div>
 
-                    <img src="{{ asset('storage/' . $movie->image) }}" alt="{{ $movie->title }} Poster">
+                    <img src="{{ $movie->image }}" alt="{{ $movie->title }} Poster">
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
 
                     <p>{{ $movie->storyline }}</p>
 
-                    <a href="{{ route('movies.show', $movie->id) }}" class="btn btn-main btn-effect">details</a>
+                    <a href="{{ route('movie-detail', $movie->id) }}" class="btn btn-main btn-effect">details</a>
                 </div>
 
 

@@ -16,10 +16,9 @@ var ShowId;
 
 // populate ui using ajax to get reservation
 function populateUI(id, date, price, signedIn) {
-    ticketPrice = price;
     SignedIn = signedIn;
     ShowId = id;
-
+    ticketPrice = price;
     // delete old seats
     SeatsContainer.innerHTML = "";
     seatsIndex = [];
@@ -31,13 +30,9 @@ function populateUI(id, date, price, signedIn) {
     if (SignedIn)
         document.getElementsByClassName("tab")[1].style.display = "none";
 
-    // populate price and date of show
-    $('#show-date').text(date);
-    $('#show-price').text(price);
-
     // fetch show data and populate seats accordingly
-    $.get('/json/shows/' + id, function (show) {
-        populateSeats(show['room']['size'], show['reservations']);
+    $.get('/shows/' + id, function (show) {
+        populateSeats(show['studio']['size'], show['reservations']);
     })
 
 }
@@ -47,6 +42,7 @@ function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll(".row .seat.selected");
 
     seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+    console.log(seatsIndex);
 
     selectedSeatsCount = selectedSeats.length;
 
@@ -71,8 +67,9 @@ function populateSeats(RoomSize, Reservations) {
 
     // add reserved seats
     $('.cinema-container .seat').each(function (i) {
-        if (Reservations.includes(i))
-            $(this).addClass("sold");
+        if (Reservations.includes(i)) {
+            $(this).addClass('sold');
+        }
     });
 
     // set seats variable to be able to get selected seat index
@@ -135,27 +132,15 @@ function submit() {
     if (SignedIn) {
         formData = {};
         $('#reservation-form').serializeArray().map(function (x) { formData[x.name] = x.value; });
-        console.log(formData);
-        $.ajax({
-            url: '/reservations',
-            type: "POST",
-            data: {
-                _token: formData['_token'],
-                card_num: formData['card-num'],
-                name: formData['name'],
-                exp: formData['exp'],
-                cvv: formData['cvv'],
-                selected_seats: seatsIndex,
-                show_id: ShowId
-            },
-            success: function (response) {
-                alert('Successfully reserved the tickets, reloading');
-                window.location.reload();
-            },
-            error: function (response) {
-                alert('An error happened, reloading');
-                window.location.reload();
-            }
+        console.log(ShowId);
+        $.post('/reservations', {
+            _token: formData['_token'],
+            card_num: formData['card-num'],
+            name: formData['name'],
+            exp: formData['exp'],
+            cvv: formData['cvv'],
+            selected_seats: seatsIndex,
+            show_id: ShowId
         });
     } else {
         window.location.href = '/login';

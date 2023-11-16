@@ -40,7 +40,7 @@
                 <ul class="navbar-nav mx-auto" id="main-menu">
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
+                        <a class="nav-link" href="#">My Ticket</a>
                     </li>
 
                     <!-- Menu Item -->
@@ -50,12 +50,12 @@
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Want to Rent?</a>
+                        <a class="nav-link" href="#">Food & Beverage</a>
                     </li>
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Food & Beverage</a>
+                        <a class="nav-link" href="{{ route('contact-us') }}">About Us</a>
                     </li>
 
                 </ul>
@@ -95,7 +95,7 @@
                             </a>
                             <div class="dropdown-content rounded font-weight-normal">
                                 <a href="#">My Account</a>
-                                <a href="#">My Reservations</a>
+                                <a href="#">My Ticket</a>
                                 <form id="logout_form" method="POST" action="logout
                                 ">
                                     @csrf

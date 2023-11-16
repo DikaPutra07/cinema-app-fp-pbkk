@@ -28,7 +28,7 @@
                         style="z-index: 5; color: #fff; font-weight: 900;">
 
                         <!-- ===== START OF SEARCH FORM ===== -->
-                        <form id="search-form-1" method="GET" action="#">
+                        <form id="search-form-1" method="GET" action="{{ route('movies-index') }}">
                             <div class="row justify-content-center">
                                 <div class="col-md-8 col-sm-10 col-12">
                                     <div class="form-group">
