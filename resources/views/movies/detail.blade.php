@@ -84,10 +84,41 @@
                         <div class="movie-media mt50">
                             <h3 id="reserve-now" class="title">Reserve your ticket!</h3>
                             {{-- {{ ddd($shows->first()->date) }} --}}
+                            @if ($shows->isNotEmpty())
+                                <table class="table-responsive showtime-table table table-striped table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Cinema</th>
+                                            <th scope="col">Start time</th>
+                                            <th scope="col">Ticket price</th>
+                                            <th scope="col">Remaining seats</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    @foreach ($shows as $show)
+                                        <tr class="{{ $show->remaining_seats < 5 ? 'table-danger' : '' }}">
+                                            <th>{{ date('d/m/Y', strtotime($movie->release_date)) }}</th>
+                                            <td>{{ $show->studio->name }}</td>
+                                            <th>{{ $show->start_time }}</th>
+                                            <td>{{ $show->price . ' ' . config('app.currency') }}
+                                            </td>
+                                            <td>{{ $show->remaining_seats . '/' . $show->studio->size }}
+                                            </td>
+                                            <td><a href="#reservation-popup"
+                                                    class="btn btn-second btn-effect open-reservation-popup"
+                                                    onclick="populateUI({{ $show->id . ',\'' . $show->date . '\',' . $show->price . ',' . (auth()->check() ? 'true' : 'false') }})">Reserve</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                                @include('components.reservation-modal')
+                            @else
                                 <div class="bg-light p-3 font-weight-bold rounded text-center">
                                     There are current no shows for this movie, check
                                     back later!
                                 </div>
+                            @endif
                         </div>
 
                     </div>

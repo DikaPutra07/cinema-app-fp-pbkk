@@ -1,7 +1,7 @@
 <div class="reservation-movie-details pt-2 pb-2">
     <div>Movie: <strong id="movie-title" class="font-weight-bold">{{ $movie->title }}</strong></div>
-    <div>Date: <strong id="show-date" class="font-weight-bold"></strong></div>
-    <div>Price: <strong class="font-weight-bold"><strong id="show-price"></strong> {{ config('app.currency') }}</strong></div>
+    <div>Date: <strong id="show-date" class="font-weight-bold">{{ date('d/m/Y', strtotime($show->date)) }}</strong></div>
+    <div>Price: <strong class="font-weight-bold"><strong id="show-price"></strong> {{ $show->price }}</strong></div>
 </div>
 
 <ul class="showcase">

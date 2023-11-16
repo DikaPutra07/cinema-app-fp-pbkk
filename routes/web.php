@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ShowController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Movie;
+use App\Models\Show;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,5 +41,19 @@ Route::controller(MovieController::class)->group(function () {
     Route::get('/movies', 'index')->name('movies-index');
     Route::get('/movies/{movie}', 'detail')->name('movie-detail');
 });
+
+Route::controller(ShowController::class)->group(function () {
+    Route::get('/shows/{show}', 'detail')->name('show-detail');
+});
+
+Route::controller(ReservationController::class)->group(function () {
+    Route::post('/reservations', 'store')->name('reservation-store');
+    Route::delete('/reservations/{reservation}', 'destroy')->name('reservation-destroy');
+});
+
+Route::get('/contact', function () {
+    return view('contact-us');
+})->name('contact-us');
+
 
 require __DIR__.'/auth.php';

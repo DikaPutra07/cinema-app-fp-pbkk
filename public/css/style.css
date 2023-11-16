@@ -73,8 +73,8 @@
 
 -------------------------------------------------------------------*/
 
-@import url(font-awesome.min.css);
-@import url(simple-line-icons.css);
+/* @import url(font-awesome.min.css);
+@import url(simple-line-icons.css); */
 @import url(themify-icons.css);
 @import url(colors.css);
 
@@ -2628,6 +2628,9 @@ ul.social-btns li {
     border-radius: 50%;
     text-align: center;
     font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #backtotop a:after {
@@ -3353,7 +3356,7 @@ form.mailchimp .btn {
 
 .pagination ul li a {
     display: block;
-    font-size: 14px;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 50px;
     -webkit-border-radius: 50%;
@@ -4578,6 +4581,10 @@ ul.blog-posts-widget .blog-content .blog-text span {
     color: #ffc741;
 }
 
+.listing-content .stars .rating {
+    color: #ffc741;
+}
+
 .movie-box-1 .stars span {
     display: block;
     color: rgba(255, 255, 255, .7);
@@ -4806,12 +4813,16 @@ ul.blog-posts-widget .blog-content .blog-text span {
     position: absolute;
     top: -30px;
     right: 30px;
+
 }
 
 .movie-box-3 .play-btn a {
     -webkit-box-shadow: 0 10px 30px 0 rgba(147, 82, 179, 0.7);
     -moz-box-shadow: 0 10px 30px 0 rgba(147, 82, 179, 0.7);
     box-shadow: 0 10px 30px 0 rgba(48, 126, 44, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .movie-box-3 .title {
@@ -5876,7 +5887,7 @@ main .col-md-12:last-of-type .movie-list-2 {
 }
 
 .reservation-container {
-  background-color: #242333;
+  background-color: rgb(14, 50, 9);
   color: #fff;
   display: flex;
   flex-direction: column;
