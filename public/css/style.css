@@ -5990,3 +5990,352 @@ main .col-md-12:last-of-type .movie-list-2 {
 .reservation-movie-details {
     width: 45%;
 }
+
+.fnb-padding-1{
+    padding: 40px 80px;
+}
+
+.fnb-margin-1{
+    margin: 40px 0;
+}
+
+#fnb-hero{
+    background-image: url(https://placehold.co/600x400);
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#fnb-hero #cinematicbites{
+    color: rgb(48, 126, 44);
+}
+
+#fnb-category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: wrap;
+}
+
+#fnb-category .fnb-category-box{
+    width: 250px;
+    height: 250px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#fnb-category .fnb-category-box h3{
+    background-color: #eee;
+    width: 100%;
+}
+
+#fnb-category .fnb-category-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#fnb-featured{
+    text-align: center;
+}
+
+#fnb-featured .fnb-featured-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#fnb-featured .fnb-featured-product{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    margin: 13px 13px;
+}
+
+#fnb-featured .fnb-featured-product:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#fnb-featured .fnb-featured-product img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#fnb-featured .fnb-featured-product .fnb-featured-product-text{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#fnb-featured .fnb-featured-product .fnb-featured-product-text span{
+    color: #606063;
+    font-size: 17px;
+}
+
+#fnb-featured .fnb-featured-product .fnb-featured-product-text h5{
+    color: #1a1a1a;
+    font-size: 20px;
+}
+
+#fnb-featured .fnb-featured-product .fnb-featured-product-text i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#fnb-featured .fnb-featured-product .fnb-featured-product-text h4{
+    font-size: 17px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#fnb-featured .fnb-featured-product .fnb-cart-btn{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    background-color: #e8f6ea;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+#fnb-banner-1{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(https://placehold.co/600x400);
+    background-position: center;
+    background-size: cover;
+}
+
+#fnb-banner-1 h4{
+    /* color: #fff; */
+    /* font-size: 16px; */
+}
+
+#fnb-banner-1 h2{
+    /* color: #fff; */
+    /* font-size: 30px; */
+    padding: 10px 0;
+}
+
+#fnb-banner-1 h2{
+    /* color: #ef3636; */
+}
+
+#fnb-banner-2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#fnb-banner-2 .fnb-banner-2-box{
+    min-width: 645px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(https://placehold.co/600x400);
+    background-position: center;
+    background-size: cover;
+    margin: 0 15px;
+    padding: 30px;
+}
+
+#fnb-banner-2 .fnb-btn-transparent{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#fnb-banner-2 .fnb-banner-2-box:hover .fnb-btn-transparent{
+    background-color: rgb(48, 126, 44);
+    border: 1px solid rgb(48, 126, 44);
+}
+
+#fnb-banner-3 .fnb-banner-3-box{
+    min-width: 645px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(https://placehold.co/600x400);
+    background-position: center;
+    background-size: cover;
+    margin: 0 15px;
+    padding: 30px;
+}
+
+#fnb-banner-3 .fnb-btn-transparent{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#fnb-banner-3 .fnb-banner-3-box:hover .fnb-btn-transparent{
+    background-color: rgb(48, 126, 44);
+    border: 1px solid rgb(48, 126, 44);
+}
+
+#fnb-detail{
+    display: flex;
+    /* height: 100vh; */
+}
+
+#fnb-detail .fnb-detail-img{
+    width: 40%;
+    margin-right: 50px;
+}
+
+#fnb-detail .fnb-detail-text{
+    width: 50%;
+}
+
+#fnb-detail .fnb-detail-text h4{
+    padding: 30px 0 20px 0;
+}
+
+#fnb-detail .fnb-detail-text h2{
+    font-size: 26px;
+}
+
+#fnb-detail .fnb-detail-text input{
+    width: 70px;
+    height: 45px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#fnb-detail .fnb-detail-text input::-webkit-outer-spin-button,
+#fnb-detail .fnb-detail-text input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#fnb-detail .fnb-detail-text span{
+    line-height: 5px;
+}
+
+#fnb-cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#fnb-cart table img{
+    width: 70px;
+}
+
+#fnb-cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#fnb-cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+}
+
+#fnb-cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#fnb-cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+
+#fnb-cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+
+#fnb-cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+
+#fnb-cart table td:nth-child(4),
+#fnb-cart table td:nth-child(5),
+#fnb-cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+#fnb-cart table td:nth-child(5) input{
+    width: 70px;
+    height: 10px 5px 10px 15px;
+}
+
+#fnb-cart table td input::-webkit-outer-spin-button,
+#fnb-cart table td input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#fnb-cart-total{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 300px;
+}
+
+#subtotal{
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+    background-color: white;
+    width: 100%;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td{
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+}

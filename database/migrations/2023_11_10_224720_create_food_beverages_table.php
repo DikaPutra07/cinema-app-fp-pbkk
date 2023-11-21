@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bevcategories', function (Blueprint $table) {
+        Schema::create('food_beverages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('price');
+            $table->string('image');
+            $table->foreignId('food_beverage_category_id')->constrained('food_beverage_categories')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bevcategories');
+        Schema::dropIfExists('food_beverages');
     }
 };

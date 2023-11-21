@@ -4,6 +4,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FoodBeverageController;
 use App\Models\Movie;
 use App\Models\Show;
 use Illuminate\Support\Facades\Route;
@@ -55,5 +56,9 @@ Route::get('/contact', function () {
     return view('contact-us');
 })->name('contact-us');
 
+Route::get('/foodandbeverages', [FoodBeverageController::class, 'index'])->name('foodandbeverages-index');
+Route::get('/foodandbeverages/category/{category}', [FoodBeverageController::class, 'categories'])->name('foodandbeverages-categories');
+Route::get('/foodandbeverages/detail', [FoodBeverageController::class, 'detail'])->name('foodandbeverages-detail');
+Route::get('/foodandbeverages/cart', [FoodBeverageController::class, 'cart'])->name('foodandbeverages-cart');
 
 require __DIR__.'/auth.php';
