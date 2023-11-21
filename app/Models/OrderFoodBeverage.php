@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrderBev extends Model
+class OrderFoodBeverage extends Model
 {
     use HasFactory;
 
@@ -26,8 +26,8 @@ class OrderBev extends Model
         return $this->belongsTo(Payment::class);
     }
 
-    public function orderBevDetails()
+    public function orderFoodBeverageDetails()
     {
-        return $this->hasMany(OrderBevDetail::class);
+        return $this->hasMany(OrderFoodBeverageDetails::class);
     }
 }

@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bevcategory extends Model
+class FoodBeverageCategory extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
     ];
-    
-    public function beverages()
+
+    public function foodBeverages()
     {
-        return $this->hasMany(Beverage::class);
+        return $this->hasMany(FoodBeverage::class);
     }
 }

@@ -18,8 +18,8 @@ class Payment extends Model
         return $this->hasMany(Reservation::class);
     }
 
-    public function orderBev()
+    public function orderfoodbeverages()
     {
-        return $this->hasMany(OrderBev::class);
+        return $this->hasMany(OrderFoodBeverage::class);
     }
 }

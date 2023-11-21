@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Actor;
 use App\Models\Director;
+use App\Models\FoodBeverage;
+use App\Models\FoodBeverageCategory;
 use App\Models\Genre;
 use App\Models\Movie;
 use App\Models\User;
@@ -1175,5 +1177,150 @@ class DatabaseSeeder extends Seeder
             ]);
         };
         createRomanceMovies($genre, $director, $actor);
+
+        // FoodCategories
+        function createFnBCategories(){
+            FoodBeverageCategory::create(['name' => 'Popcorns']);
+            FoodBeverageCategory::create(['name' => 'Snacks']);
+            FoodBeverageCategory::create(['name' => 'Light Meal']);
+            FoodBeverageCategory::create(['name' => 'Sweet Treats']);
+            FoodBeverageCategory::create(['name' => 'Beverages']);
+        }
+        createFnBCategories();
+
+        $fnbCategory = FoodBeverageCategory::all();
+
+        // PopCorn
+        function createPopcorns($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Butter Popcorn',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Caramel Popcorn',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+        }
+        createPopcorns($fnbCategory);
+
+        // Snacks
+        function createSnacks($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Chicken tender',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Chicken nuggets',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Nachos',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'French fries',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Mozzarella sticks',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+        }
+        createSnacks($fnbCategory);
+
+        // Light Meal
+        function createLightMeals($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Hotdog',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Chicken burger',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Beef burger',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+            ]);
+        }
+        createLightMeals($fnbCategory);
+
+        // Sweet Treats
+        function createSweetTreats($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Ice cream',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Muffin',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Donut',
+                'price' => 5.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
+            ]);
+        }
+        createSweetTreats($fnbCategory);
+
+        // Beverages
+        function createBeverages($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Coke',
+                'price' => 2.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Sprite',
+                'price' => 2.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Coffee',
+                'price' => 2.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Tea',
+                'price' => 2.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Water',
+                'price' => 2.99,
+                'image' => 'https://placehold.co/600x400',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+        }
+        createBeverages($fnbCategory);
     }
 }

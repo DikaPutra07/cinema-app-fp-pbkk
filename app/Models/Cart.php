@@ -15,9 +15,9 @@ class Cart extends Model
         'quantity',
     ];
 
-    public function beverage()
+    public function foodbeverage()
     {
-        return $this->belongsTo(Beverage::class);
+        return $this->belongsTo(FoodBeverage::class);
     }
 
     public function user()

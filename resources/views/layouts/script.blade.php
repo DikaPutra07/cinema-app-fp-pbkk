@@ -12,6 +12,7 @@
 <script src={{  asset('js/isotope.pkgd.min.js')  }}></script>
 <script src={{  asset('js/headroom.js')  }}></script>
 <script src={{  asset('js/custom.js')  }}></script>
+<script src={{  asset('js/fnb.menus.js')  }}></script>
 
 <!-- ===== Slider Revolution core JavaScript files ===== -->
 <script type="text/javascript" src={{  asset('revolution/js/jquery.themepunch.tools.min.js')  }}></script>

@@ -50,7 +50,7 @@
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Food & Beverage</a>
+                        <a class="nav-link" href=" {{ route('foodandbeverages-index') }} ">Food & Beverage</a>
                     </li>
 
                     <!-- Menu Item -->
