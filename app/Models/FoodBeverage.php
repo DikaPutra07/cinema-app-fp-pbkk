@@ -13,6 +13,7 @@ class FoodBeverage extends Model
         'name',
         'price',
         'image',
+        'description',
         'food_beverage_category_id',
     ];
 

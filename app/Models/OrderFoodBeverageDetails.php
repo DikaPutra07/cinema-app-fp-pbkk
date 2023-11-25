@@ -10,8 +10,8 @@ class OrderFoodBeverageDetails extends Model
     use HasFactory;
 
     protected $fillable = [
-        'order_bev_id',
-        'beverage_id',
+        'order_food_beverage_id',
+        'food_beverage_id',
         'quantity'
     ];
 

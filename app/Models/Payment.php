@@ -10,7 +10,8 @@ class Payment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'method'
+        'method',
+        'image'
     ];
 
     public function reservation()

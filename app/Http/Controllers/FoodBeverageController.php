@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\FoodBeverage;
 use App\Models\FoodBeverageCategory;
 use Illuminate\Http\Request;
@@ -10,9 +11,15 @@ class FoodBeverageController extends Controller
 {
     public function index()
     {   
+        $combodeals = FoodBeverage::where('food_beverage_category_id', 1)->get();
+        $foodandbeverages = FoodBeverage::where('food_beverage_category_id', '!=', 1)->get();
+        $categories = FoodBeverageCategory::all();
+        $featured = FoodBeverage::inRandomOrder()->limit(4)->get();
         return view('foodandbeverage.index', [
-            'foodandbeverages' => FoodBeverage::all(),
-            'categories' => FoodBeverageCategory::all()
+            'combodeals' => $combodeals,
+            'foodandbeverages' => $foodandbeverages,
+            'categories' => $categories,
+            'featured' => $featured
         ]);
     }
 
@@ -24,13 +31,30 @@ class FoodBeverageController extends Controller
         ]);
     }
 
-    public function detail()
-    {
-        return view('foodandbeverage.details');
-    }
+    public function detail($fnb)
+    {   
+        if (auth()->check()) {
+            $match = [
+                'user_id' => auth()->user()->id,
+                'food_beverage_id' => $fnb
+            ];
+    
+            $addedToCart = Cart::where($match)->exists();
 
-    public function cart()
-    {
-        return view('foodandbeverage.cart');
+            return view('foodandbeverage.details', [
+                'details' => FoodBeverage::where('id', $fnb)->get(),
+                'featured' => FoodBeverage::inRandomOrder()->limit(4)->get(),
+                'addedToCart' => $addedToCart
+            ]);
+            
+        } else {
+            return view('foodandbeverage.details', [
+                'details' => FoodBeverage::where('id', $fnb)->get(),
+                'featured' => FoodBeverage::inRandomOrder()->limit(4)->get(),
+                'addedToCart' => false
+            ]);
+        }
+        
+
     }
 }

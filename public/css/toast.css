@@ -1,0 +1,68 @@
+body{
+    overflow-x: hidden;
+}
+
+#toast-toast *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    z-index: 999;
+}
+
+#toast-toast .toast-notification-box{
+    background-color: white;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-left: 8px solid rgb(48, 126, 44);
+    position: absolute;
+    top: 30px;
+    right: -100%;
+    /* right: 30px; */
+    transition: all 0.5s;
+}
+
+#toast-toast .toast-notification-box.toast-active{
+    right: 30px;
+}
+
+#toast-toast .fa-check-circle, .fa-xmark{
+    position: absolute;
+    font-size: 26px;
+}
+
+#toast-toast .fa-check-circle{
+    left: 15px;
+    color: rgb(48, 126, 44);
+    font-family: "Font Awesome 6 Free";
+}
+
+#toast-toast .fa-xmark{
+    right: 15px;
+    cursor: pointer;
+    font-family: "Font Awesome 6 Free";
+}
+
+#toast-toast .toast-box-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    width: 65%;
+    height: 100%;
+}
+
+#toast-toast .toast-box-text h3{
+    font-size: 20px;
+    color: black;
+}
+
+#toast-toast .toast-box-text span{
+    color: gray;
+}

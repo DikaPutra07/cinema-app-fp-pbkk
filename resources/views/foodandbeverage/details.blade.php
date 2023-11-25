@@ -6,115 +6,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 @endpush
 
-    <section id="fnb-detail" class="fnb-padding-1">
+@if (session()->has('success'))
+    @include('components.toast')
+@endif
+
+<section id="fnb-detail" class="fnb-padding-1">
+    @foreach ($details as $detail)
         <div class="fnb-detail-img">
-            <img src="https://placehold.co/300x300" width="100%" id="fnb-main-img">
+            <img src="{{ asset($detail->image) }}" width="100%" id="fnb-main-img">
         </div>
-
         <div class="fnb-detail-text">
-            <h6 class="my-2">[Category]</h6>
-            <h4 class="my-2">[FnB Name]</h4>
-            <h2 class="my-2">[Price]</h2>
-            <input class="mt-4" type="number" value="1">
-            <button class="my-2 btn btn-light" style="height: 45px">Add to Cart</button>
-            <h4 class="my-2">[FnB Details]</h4>
-            <span class="my-2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae soluta blanditiis doloribus doloremque nostrum. Provident culpa laboriosam dolore laudantium veritatis sequi adipisci necessitatibus id illo cupiditate libero at, beatae pariatur. </span>
-        </div>
-    </section>
+            <h6 class="my-2">Category: <a href="{{ route('foodandbeverages-categories', $detail->foodBeverageCategory->id) }}">{{ $detail->foodBeverageCategory->name }}</a></h6>
+            <h4 class="my-2">{{ $detail->name }}</h4>
+            <h2 class="mt-2 mb-4">Rp{{ $detail->price }}</h2>
 
-    <section id="fnb-featured" class="fnb-padding-1 mt-1">
-        <h2 class="my-2">[Featured or smth]</h2>
-        <p class="my-2">[some tagline]</p>
-        <div class="fnb-featured-container">
-            {{-- combo dummy --}}
-            <div class="fnb-featured-product">
-                <a href="{{ route('foodandbeverages-detail') }}">
-                    <img src="https://placehold.co/300x300">
+            @if ($addedToCart)
+                <a href="{{ route('cart-index') }}">
+                    <button class="mt-4 mb-2 fnb-btn-transparent" style="height: 45px">VIEW IN CART</button>
                 </a>
-                <div class="fnb-featured-product-text">
-                    <span class="my-2">[category]</span>
-                    <a href="{{ route('foodandbeverages-detail') }}">
-                        <h5 class="my-2">[product name]</h5>
-                    </a>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="my-2">[price]</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart fnb-cart-btn"></i></a>
-            </div>
-    
-            {{-- combo dummy --}}
-            <div class="fnb-featured-product">
-                <a href="{{ route('foodandbeverages-detail') }}">
-                    <img src="https://placehold.co/300x300">
-                </a>
-                <div class="fnb-featured-product-text">
-                    <span class="my-2">[category]</span>
-                    <a href="{{ route('foodandbeverages-detail') }}">
-                        <h5 class="my-2">[product name]</h5>
-                    </a>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="my-2">[price]</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart fnb-cart-btn"></i></a>
-            </div>
-            
-            {{-- combo dummy --}}
-            <div class="fnb-featured-product">
-                <a href="{{ route('foodandbeverages-detail') }}">
-                    <img src="https://placehold.co/300x300">
-                </a>
-                <div class="fnb-featured-product-text">
-                    <span class="my-2">[category]</span>
-                    <a href="{{ route('foodandbeverages-detail') }}">
-                        <h5 class="my-2">[product name]</h5>
-                    </a>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="my-2">[price]</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart fnb-cart-btn"></i></a>
-            </div>
-    
-            
-            {{-- combo dummy --}}
-            <div class="fnb-featured-product">
-                <a href="{{ route('foodandbeverages-detail') }}">
-                    <img src="https://placehold.co/300x300">
-                </a>
-                <div class="fnb-featured-product-text">
-                    <span class="my-2">[category]</span>
-                    <a href="{{ route('foodandbeverages-detail') }}">
-                        <h5 class="my-2">[product name]</h5>
-                    </a>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="my-2">[price]</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart fnb-cart-btn"></i></a>
-            </div>
+            @else
+                <form method="POST" action="{{ route('cart-store') }}">
+                    @csrf
+                    <input type="hidden" name="cart-fnb-id" value="{{ $detail->id }}">
+                    @error('cart-quantity')
+                        <div class="fnb-validation-error mb-2">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Order quantity may not be 0!</span>
+                        </div>
+                    @enderror
+                    <input name="cart-quantity" type="number" value="1" @error('cart-quantity') style="border: 1px solid red;" @enderror>
+                    <button id="fnb-add" type="submit" class="my-2 btn btn-light" style="height: 45px">Add to Cart</button>
+                </form>
+            @endif
+
+            <h4 class="my-2">Details</h4>
+            <span class="my-2">{{ $detail->description }}</span>
         </div>
-    </section>
-    
+    @endforeach
+</section>
+
+<section id="fnb-featured" class="fnb-padding-1 mt-1">
+    <h2 class="mt-2 mb-4">Featured Menu</h2>
+    <div class="fnb-featured-container">
+        @each('foodandbeverage.components.fnb-featured', $featured, 'fnb')
+    </div>
+</section>
+
+@if(Auth::check())
+    @include('foodandbeverage.components.fnb-cart-fixed-button')
+@endif
+
 @endsection
