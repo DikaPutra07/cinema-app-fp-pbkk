@@ -94,7 +94,7 @@
                                 </span>
                             </a>
                             <div class="dropdown-content rounded font-weight-normal">
-                                <a href="#">My Account</a>
+                                <a href="{{ route('profilenizam-index') }}">My Account</a>
                                 <a href="#">My Ticket</a>
                                 <form id="logout_form" method="POST" action="logout
                                 ">

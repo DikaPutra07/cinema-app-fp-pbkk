@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('image');
+            $table->text('description');
             $table->foreignId('food_beverage_category_id')->constrained('food_beverage_categories')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

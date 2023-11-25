@@ -8,9 +8,13 @@ use App\Models\FoodBeverage;
 use App\Models\FoodBeverageCategory;
 use App\Models\Genre;
 use App\Models\Movie;
+use App\Models\Payment;
+use App\Models\Show;
+use App\Models\Studio;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Symfony\Component\CssSelector\Node\FunctionNode;
 
 class DatabaseSeeder extends Seeder
 {
@@ -1180,28 +1184,132 @@ class DatabaseSeeder extends Seeder
 
         // FoodCategories
         function createFnBCategories(){
-            FoodBeverageCategory::create(['name' => 'Popcorns']);
-            FoodBeverageCategory::create(['name' => 'Snacks']);
-            FoodBeverageCategory::create(['name' => 'Light Meal']);
-            FoodBeverageCategory::create(['name' => 'Sweet Treats']);
-            FoodBeverageCategory::create(['name' => 'Beverages']);
+            FoodBeverageCategory::create([
+                'name' => 'Combo',
+                'image' => '',
+            ]);
+            FoodBeverageCategory::create([
+                'name' => 'Popcorns',
+                'image' => 'images/fnb/categories/popcorn.jpg',
+            ]);
+            FoodBeverageCategory::create([
+                'name' => 'Snacks',
+                'image' => 'images/fnb/categories/snack.jpg',
+            ]);
+            FoodBeverageCategory::create([
+                'name' => 'Sandwich',
+                'image' => 'images/fnb/categories/sandwich.jpg',
+            ]);
+            FoodBeverageCategory::create([
+                'name' => 'Sweet Treats',
+                'image' => 'images/fnb/categories/sweettreats.jpg',
+            ]);
+            FoodBeverageCategory::create([
+                'name' => 'Beverages',
+                'image' => 'images/fnb/categories/beverages.jpg',
+            ]);
         }
         createFnBCategories();
 
         $fnbCategory = FoodBeverageCategory::all();
 
+        // Combo
+        function createCombo($fnbCategory){
+            FoodBeverage::create([
+                'name' => 'Combo 1',
+                'price' => 50000,
+                'image' => 'images/fnb/combo/combo-1.jpg',
+                'description' => 'Small popcorn + Cola',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Combo 2',
+                'price' => 90000,
+                'image' => 'images/fnb/combo/combo-2.jpg',
+                'description' => 'Medium popcorn + 2 Cola',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Combo 3',
+                'price' => 90000,
+                'image' => 'images/fnb/combo/combo-3.jpg',
+                'description' => 'Medium popcorn + 2 Iced tea',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Combo 4',
+                'price' => 90000,
+                'image' => 'images/fnb/combo/combo-4.jpg',
+                'description' => 'Small popcorn + Cola + French fries',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Combo 5',
+                'price' => 90000,
+                'image' => 'images/fnb/combo/combo-5.jpg',
+                'description' => 'Small popcorn + Cola + Nachos',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Combo 6',
+                'price' => 100000,
+                'image' => 'images/fnb/combo/combo-6.jpg',
+                'description' => 'Small popcorn + Cola + Hotdog',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+
+            FoodBeverage::create([
+                'name' => 'Combo 7',
+                'price' => 100000,
+                'image' => 'images/fnb/combo/combo-7.jpg',
+                'description' => 'Small popcorn + Cola + Chicken burger',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Combo')->first()->id,
+            ]);
+        }
+        createCombo($fnbCategory);
+
         // PopCorn
         function createPopcorns($fnbCategory){
             FoodBeverage::create([
-                'name' => 'Butter Popcorn',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'Popcorn Salt (S)',
+                'price' => 30000,
+                'image' => 'images/fnb/popcorn/popcornsalt-S.jpg',
+                'description' => 'Popcorn Salt Small Size',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
             ]);
             FoodBeverage::create([
-                'name' => 'Caramel Popcorn',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'Popcorn Salt (M)',
+                'price' => 55000,
+                'image' => 'images/fnb/popcorn/popcornsalt-M.jpg',
+                'description' => 'Popcorn Salt Medium Size',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Popcorn Salt (L)',
+                'price' => 75000,
+                'image' => 'images/fnb/popcorn/popcornsalt-L.jpg',
+                'description' => 'Popcorn Salt Large Size',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Popcorn Caramel (S)',
+                'price' => 30000,
+                'image' => 'images/fnb/popcorn/popcorncaramel-S.jpg',
+                'description' => 'Popcorn Caramel Small Size',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Popcorn Caramel (M)',
+                'price' => 55000,
+                'image' => 'images/fnb/popcorn/popcorncaramel-M.jpg',
+                'description' => 'Popcorn Caramel Medium Size',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Popcorn Caramel (L)',
+                'price' => 75000,
+                'image' => 'images/fnb/popcorn/popcorncaramel-L.jpg',
+                'description' => 'Popcorn Caramel Large Size',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Popcorns')->first()->id,
             ]);
         }
@@ -1210,79 +1318,111 @@ class DatabaseSeeder extends Seeder
         // Snacks
         function createSnacks($fnbCategory){
             FoodBeverage::create([
-                'name' => 'Chicken tender',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
-            ]);
-            FoodBeverage::create([
-                'name' => 'Chicken nuggets',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'Chicken Tender',
+                'price' => 60000,
+                'image' => 'images/fnb/snacks/chickentender.jpg',
+                'description' => 'Crispy chicken tenders served with dipping sauce',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
             ]);
             FoodBeverage::create([
                 'name' => 'Nachos',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'price' => 50000,
+                'image' => 'images/fnb/snacks/nachos.jpg',
+                'description' => 'Crispy tortilla chips loaded with melted cheese and zesty toppings',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
             ]);
             FoodBeverage::create([
-                'name' => 'French fries',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'French Fries',
+                'price' => 55000,
+                'image' => 'images/fnb/snacks/frenchfries.jpg',
+                'description' => 'Crispy fries seasoned to perfection',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
             ]);
             FoodBeverage::create([
-                'name' => 'Mozzarella sticks',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'Mozzarella Sticks',
+                'price' => 55000,
+                'image' => 'images/fnb/snacks/mozarellastick.jpg',
+                'description' => 'Golden mozzarella sticks with marinara dipping sauce',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Onion Ring',
+                'price' => 55000,
+                'image' => 'images/fnb/snacks/onionring.jpg',
+                'description' => 'Crunchy onion rings with a savory, seasoned coating',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Mac and Cheese',
+                'price' => 70000,
+                'image' => 'images/fnb/snacks/macncheese.jpg',
+                'description' => 'Creamy macaroni and cheese with a rich, cheesy sauce',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Snacks')->first()->id,
             ]);
         }
         createSnacks($fnbCategory);
 
-        // Light Meal
-        function createLightMeals($fnbCategory){
+        // Sandwich
+        function createSandwich($fnbCategory){
             FoodBeverage::create([
                 'name' => 'Hotdog',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+                'price' => 50000,
+                'image' => 'images/fnb/sandwich/hotdog.jpg',
+                'description' => 'Grilled sausage in a soft bun with flavorful toppings',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sandwich')->first()->id,
             ]);
             FoodBeverage::create([
-                'name' => 'Chicken burger',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+                'name' => 'Chicken Burger',
+                'price' => 60000,
+                'image' => 'images/fnb/sandwich/chickenburger.jpg',
+                'description' => 'Tender chicken patty, crisp lettuce, and zesty mayo on bun', 
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sandwich')->first()->id,
             ]);
             FoodBeverage::create([
-                'name' => 'Beef burger',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Light Meal')->first()->id,
+                'name' => 'Beef Burger',
+                'price' => 60000,
+                'image' => 'images/fnb/sandwich/beefburger.jpg',
+                'description' => 'Juicy beef patty, cheese, and classic fixings on a bun', 
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sandwich')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Burrito',
+                'price' => 60000,
+                'image' => 'images/fnb/sandwich/burrito.jpg',
+                'description' => 'Savory blend of grilled meats, beans, rice, and fresh salsa',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sandwich')->first()->id,
             ]);
         }
-        createLightMeals($fnbCategory);
+        createSandwich($fnbCategory);
 
         // Sweet Treats
         function createSweetTreats($fnbCategory){
             FoodBeverage::create([
                 'name' => 'Ice cream',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'price' => 40000,
+                'image' => 'images/fnb/sweettreats/icecream.jpg',
+                'description' => 'Smooth and creamy ice cream in various delightful flavors',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
             ]);
             FoodBeverage::create([
                 'name' => 'Muffin',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'price' => 40000,
+                'image' => 'images/fnb/sweettreats/muffin.jpg',
+                'description' => 'Freshly baked muffins in assorted flavors for a delightful treat',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
             ]);
             FoodBeverage::create([
                 'name' => 'Donut',
-                'price' => 5.99,
-                'image' => 'https://placehold.co/600x400',
+                'price' => 40000,
+                'image' => 'images/fnb/sweettreats/donut.jpg',
+                'description' => 'Soft, glazed donuts with a sweet and satisfying taste',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Macarons',
+                'price' => 40000,
+                'image' => 'images/fnb/sweettreats/macarons.jpg',
+                'description' => 'Delicate, colorful macarons with a sweet, creamy filling',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Sweet Treats')->first()->id,
             ]);
         }
@@ -1291,36 +1431,617 @@ class DatabaseSeeder extends Seeder
         // Beverages
         function createBeverages($fnbCategory){
             FoodBeverage::create([
-                'name' => 'Coke',
-                'price' => 2.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
-            ]);
-            FoodBeverage::create([
-                'name' => 'Sprite',
-                'price' => 2.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
-            ]);
-            FoodBeverage::create([
-                'name' => 'Coffee',
-                'price' => 2.99,
-                'image' => 'https://placehold.co/600x400',
-                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
-            ]);
-            FoodBeverage::create([
-                'name' => 'Tea',
-                'price' => 2.99,
-                'image' => 'https://placehold.co/600x400',
+                'name' => 'Cola',
+                'price' => 30000,
+                'image' => 'images/fnb/beverages/cola.jpg',
+                'description' => 'Cold cola',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
             ]);
             FoodBeverage::create([
                 'name' => 'Water',
-                'price' => 2.99,
-                'image' => 'https://placehold.co/600x400',
+                'price' => 20000,
+                'image' => 'images/fnb/beverages/water.jpg',
+                'description' => 'Aqua bottled water',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Hot Coffee',
+                'price' => 30000,
+                'image' => 'images/fnb/beverages/hotcoffee.jpg',
+                'description' => 'Freshly brewed coffee',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Iced Tea',
+                'price' => 30000,
+                'image' => 'images/fnb/beverages/icedtea.jpg',
+                'description' => 'Refreshing iced tea',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Matcha Latte',
+                'price' => 50000,
+                'image' => 'images/fnb/beverages/matchalatte.jpg',
+                'description' => 'Creamy matcha latte',
+                'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
+            ]);
+            FoodBeverage::create([
+                'name' => 'Brown Sugar Milk',
+                'price' => 50000,
+                'image' => 'images/fnb/beverages/brownsugarmilk.jpg',
+                'description' => 'Sweet and creamy brown sugar milk',
                 'food_beverage_category_id' => $fnbCategory->where('name', 'Beverages')->first()->id,
             ]);
         }
         createBeverages($fnbCategory);
+
+        // Payments
+        function createPayments(){
+            Payment::create([
+                'method' => 'OVO',
+                'image' => 'images/payments/ovo.png',
+            ]);
+            Payment::create([
+                'method' => 'GoPay',
+                'image' => 'images/payments/gopay.png',
+            ]);
+            Payment::create([
+                'method' => 'BCA Virtual Account',
+                'image' => 'images/payments/bcava.png',
+            ]);
+            Payment::create([
+                'method' => 'BRI Virtual Account',
+                'image' => 'images/payments/briva.png',
+            ]);
+            Payment::create([
+                'method' => 'BNI Virtual Account',
+                'image' => 'images/payments/bniva.png',
+            ]);
+            Payment::create([
+                'method' => 'Mandiri Virtual Account',
+                'image' => 'images/payments/mandiriva.png',
+            ]);
+        }
+        createPayments();
+
+        // Studio
+        function createStudio(){
+            Studio::create([
+                'name' => 'Studio 1',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 2',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 3',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 4',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 5',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 6',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 7',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 8',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 9',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 10',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 11',
+                'size' => 30,
+            ]);
+            Studio::create([
+                'name' => 'Studio 12',
+                'size' => 30,
+            ]);
+        }
+        createStudio();
+
+        $movies = Movie::all();
+        $studios = Studio::all();
+        // Show
+        function createShow($movies, $studios){
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'The Dark Knight')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 1')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:50:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'The Dark Knight')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 1')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '17:40:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'The Shawshank Redemption')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 1')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '20:20:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'The Shawshank Redemption')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 1')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '23:00:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'Smile')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 1')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'John Wick')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 2')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:00:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'John Wick')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 2')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '16:00:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'Forrest Gump')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 2')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '18:40:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'Forrest Gump')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 2')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '21:20:00',
+                'date' => '2023-12-01',
+                'movie_id' => $movies->where('title', 'Saw X')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 2')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'The Matrix')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 3')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:30:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'The Matrix')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 3')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '17:00:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'Oppenheimer')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 3')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '20:20:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'Oppenheimer')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 3')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '23:40:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'Evil Dead Rise')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 3')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'The Lord of the Rings: The Return of the King')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 4')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:40:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'The Lord of the Rings: The Return of the King')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 4')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '19:20:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'Interstellar')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 4')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '22:20:00',
+                'date' => '2023-12-02',
+                'movie_id' => $movies->where('title', 'Saw X')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 4')->first()->id,
+                'price' => 55000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'The Good, the Bad and the Ugly')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 5')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'The Good, the Bad and the Ugly')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 5')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '18:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'Interstellar')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 5')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '21:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'The Notebook')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 5')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'Superbad')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 6')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:10:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'Superbad')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 6')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '16:20:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'Beauty and the Beast')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 6')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '18:40:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'Beauty and the Beast')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 6')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '21:00:00',
+                'date' => '2023-12-03',
+                'movie_id' => $movies->where('title', 'The Notebook')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 6')->first()->id,
+                'price' => 60000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'The Hangover')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 7')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '13:50:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'The Hangover')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 7')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:40:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'Blade Runner 2049')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 7')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '19:00:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'Blade Runner 2049')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 7')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '22:20:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'The Conjuring')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 7')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'Barbie')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 8')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:10:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'Barbie')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 8')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '16:20:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'The Godfather')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 8')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '19:30:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'The Godfather')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 8')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '22:40:00',
+                'date' => '2023-12-04',
+                'movie_id' => $movies->where('title', 'Smile')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 8')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Puss in Boots: The Last Wish')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 9')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '14:10:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Puss in Boots: The Last Wish')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 9')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '16:20:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'The Godfather: Part II')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 9')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '20:00:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'The Godfather: Part II')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 9')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Scary Movie')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 10')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '13:40:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Scary Movie')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 10')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:20:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Titanic')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 10')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '18:50:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'Titanic')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 10')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '22:20:00',
+                'date' => '2023-12-05',
+                'movie_id' => $movies->where('title', 'The Conjuring')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 10')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Lion King')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '13:40:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'Finding Nemo')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:30:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Nun')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '17:20:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Lion King')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '19:00:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Nun')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '20:50:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'Finding Nemo')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '22:40:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Incredibles')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 11')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '12:00:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'After Everything')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '13:50:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'After Everything')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '15:40:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'Me Before You')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '17:40:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'Me Before You')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '19:40:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'Evil Dead Rise')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+            Show::create([
+                'start_time' => '21:30:00',
+                'date' => '2023-12-06',
+                'movie_id' => $movies->where('title', 'The Incredibles')->first()->id,
+                'studio_id' => $studios->where('name', 'Studio 12')->first()->id,
+                'price' => 50000,
+                'remaining_seats' => 30,
+            ]);
+        }
+        createShow($movies, $studios);
     }
 }

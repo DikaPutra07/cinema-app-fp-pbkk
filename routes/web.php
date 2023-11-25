@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FoodBeverageController;
+use App\Http\Controllers\OrderFoodBeverageController;
+use App\Http\Controllers\ProfileNizamController;
 use App\Models\Movie;
 use App\Models\Show;
 use Illuminate\Support\Facades\Route;
@@ -58,7 +61,15 @@ Route::get('/contact', function () {
 
 Route::get('/foodandbeverages', [FoodBeverageController::class, 'index'])->name('foodandbeverages-index');
 Route::get('/foodandbeverages/category/{category}', [FoodBeverageController::class, 'categories'])->name('foodandbeverages-categories');
-Route::get('/foodandbeverages/detail', [FoodBeverageController::class, 'detail'])->name('foodandbeverages-detail');
-Route::get('/foodandbeverages/cart', [FoodBeverageController::class, 'cart'])->name('foodandbeverages-cart');
+Route::get('/foodandbeverages/detail/{fnb}', [FoodBeverageController::class, 'detail'])->name('foodandbeverages-detail');
+
+Route::get('/foodandbeverages/cart', [CartController::class, 'index'])->name('cart-index');
+Route::post('/foodandbeverages/cart/create', [CartController::class, 'store'])->name('cart-store');
+Route::delete('/foodandbeverages/cart/delete/{cartid}', [CartController::class, 'destroy'])->name('cart-destroy');
+
+Route::post('/foodandbeverages/order',[OrderFoodBeverageController::class, 'store'])->name('order-store');
+
+Route::get('/profilenizam', [ProfileNizamController::class, 'index'])->name('profilenizam-index');
+Route::put('/profilenizam/edit/{id}', [ProfileNizamController::class, 'update'])->name('profilenizam-update');
 
 require __DIR__.'/auth.php';
