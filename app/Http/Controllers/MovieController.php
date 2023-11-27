@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Genre;
 use App\Models\Movie;
+use App\Models\Payment;
 use App\Models\Show;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -42,6 +43,7 @@ class MovieController extends Controller
         return view('movies.detail', [
             'movie' => $movie,
             'shows' => Show::where('movie_id', $movie->id)->get(),
+            'payment' => Payment::all(),
             'recommendationsByGenre' => Movie::where('genre_id', $movie->genre_id)->where('id', '!=', $movie->id)->limit(4)->get()->collect(),
             'recommendationsByRate' => Movie::where('id', '!=', $movie->id)->limit(4)->get()->collect()->sortByDesc('rating'),
         ]);

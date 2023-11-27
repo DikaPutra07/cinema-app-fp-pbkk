@@ -6,12 +6,12 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class ProfileNizamController extends Controller
+class ProfilesController extends Controller
 {
     public function index()
     {   
         $user = auth()->user();
-        return view('profile_nizam.index', [
+        return view('profile.user-dashboard', [
             'user' => $user
         ]);
     }

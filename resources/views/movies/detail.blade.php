@@ -1,6 +1,12 @@
 @extends('layouts.layout')
 
+@push('head')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 @section('content')
+
+@if (session()->has('success'))
+    @include('components.toast')
+@endif
     <!-- =============== START OF MOVIE DETAIL INTRO =============== -->
     <section class="movie-detail-intro ptb150"
         style="background: url({{ asset('images/posters/detail-posters.jpg') }});">
@@ -107,7 +113,7 @@
                                             </td>
                                             <td><a href="#reservation-popup"
                                                     class="btn btn-second btn-effect open-reservation-popup"
-                                                    onclick="populateUI({{ $show->id . ',\'' . $show->date . '\',' . $show->price . ',' . (auth()->check() ? 'true' : 'false') }})">Reserve</a>
+                                                    onclick="populateUI({{ $show->id . ',' . $show->movie->id . ',\'' . $show->date . '\',' . $show->price . ',' . (auth()->check() ? 'true' : 'false') }})">Reserve</a>
                                             </td>
                                         </tr>
                                     @endforeach

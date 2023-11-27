@@ -28,13 +28,18 @@ class ReservationController extends Controller
         $show = Show::find($request->show_id);
         $show->remaining_seats -= count($request->selected_seats);
         $show->save();
+
+        return redirect('/')->with('success', 'Reservation created successfully');
     }
 
     public function destroy(Reservation $reservation)
     {
-        $reservation->delete();
         $show = Show::find($reservation->show_id);
         $show->remaining_seats += 1;
+
+        $reservation->delete();
         $show->save();
+
+        return redirect()->back();
     }
 }

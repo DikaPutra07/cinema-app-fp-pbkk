@@ -13,11 +13,13 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 var SignedIn;
 var ShowId;
+var movieId;
 
 // populate ui using ajax to get reservation
-function populateUI(id, date, price, signedIn) {
+function populateUI(id, movie_id, date, price, signedIn) {
     SignedIn = signedIn;
     ShowId = id;
+    movieId = movie_id;
     ticketPrice = price;
     // delete old seats
     SeatsContainer.innerHTML = "";
@@ -132,16 +134,17 @@ function submit() {
     if (SignedIn) {
         formData = {};
         $('#reservation-form').serializeArray().map(function (x) { formData[x.name] = x.value; });
+        console.log(formData);
+        console.log(seatsIndex);
         console.log(ShowId);
         $.post('/reservations', {
             _token: formData['_token'],
             card_num: formData['card-num'],
             name: formData['name'],
-            exp: formData['exp'],
-            cvv: formData['cvv'],
             selected_seats: seatsIndex,
             show_id: ShowId
-        });
+        })
+        window.location.href = '/movies/'+movieId; 
     } else {
         window.location.href = '/login';
     }
