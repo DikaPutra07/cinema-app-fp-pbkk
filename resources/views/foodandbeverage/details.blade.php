@@ -35,7 +35,7 @@
                         </div>
                     @enderror
                     <input name="cart-quantity" type="number" value="1" @error('cart-quantity') style="border: 1px solid red;" @enderror>
-                    <button id="fnb-add" type="submit" class="my-2 btn btn-light" style="height: 45px">Add to Cart</button>
+                    <button id="fnb-add" type="submit" class="my-2 btn btn-main" style="height: 45px">Add to Cart</button>
                 </form>
             @endif
 

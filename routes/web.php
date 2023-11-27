@@ -59,17 +59,38 @@ Route::get('/contact', function () {
     return view('contact-us');
 })->name('contact-us');
 
-Route::get('/foodandbeverages', [FoodBeverageController::class, 'index'])->name('foodandbeverages-index');
-Route::get('/foodandbeverages/category/{category}', [FoodBeverageController::class, 'categories'])->name('foodandbeverages-categories');
-Route::get('/foodandbeverages/detail/{fnb}', [FoodBeverageController::class, 'detail'])->name('foodandbeverages-detail');
+Route::controller(FoodBeverageController::class)->group(function () {
+    Route::get('/foodandbeverages', 'index')->name('foodandbeverages-index');
+    Route::get('/foodandbeverages/category/{category}', 'categories')->name('foodandbeverages-categories');
+    Route::get('/foodandbeverages/detail/{fnb}', 'detail')->name('foodandbeverages-detail');
+});
 
-Route::get('/foodandbeverages/cart', [CartController::class, 'index'])->name('cart-index');
-Route::post('/foodandbeverages/cart/create', [CartController::class, 'store'])->name('cart-store');
-Route::delete('/foodandbeverages/cart/delete/{cartid}', [CartController::class, 'destroy'])->name('cart-destroy');
+Route::controller(CartController::class)->group(function () {
+    Route::get('/foodandbeverages/cart', 'index')->middleware(['auth', 'verified'])->name('cart-index');
+    Route::post('/foodandbeverages/cart/create', 'store')->middleware(['auth', 'verified'])->name('cart-store');
+    Route::delete('/foodandbeverages/cart/delete/{cartid}', 'destroy')->middleware(['auth', 'verified'])->name('cart-destroy');
+});
 
-Route::post('/foodandbeverages/order',[OrderFoodBeverageController::class, 'store'])->name('order-store');
+Route::controller(OrderFoodBeverageController::class)->group(function () {
+    Route::post('/foodandbeverages/order', 'store')->name('order-store');
+})->middleware(['auth', 'verified']);
 
-Route::get('/profilenizam', [ProfileNizamController::class, 'index'])->name('profilenizam-index');
-Route::put('/profilenizam/edit/{id}', [ProfileNizamController::class, 'update'])->name('profilenizam-update');
+Route::controller(ProfileController::class)->group(function () {
+    Route::get('/profile', 'index')->name('profilenizam-index');
+    Route::put('/profile/edit/{id}', 'update')->name('profilenizam-update');
+})->middleware(['auth', 'verified']);
+
+// Route::get('/foodandbeverages', [FoodBeverageController::class, 'index'])->name('foodandbeverages-index');
+// Route::get('/foodandbeverages/category/{category}', [FoodBeverageController::class, 'categories'])->name('foodandbeverages-categories');
+// Route::get('/foodandbeverages/detail/{fnb}', [FoodBeverageController::class, 'detail'])->name('foodandbeverages-detail');
+
+// Route::get('/foodandbeverages/cart', [CartController::class, 'index'])->name('cart-index');
+// Route::post('/foodandbeverages/cart/create', [CartController::class, 'store'])->name('cart-store');
+// Route::delete('/foodandbeverages/cart/delete/{cartid}', [CartController::class, 'destroy'])->name('cart-destroy');
+
+// Route::post('/foodandbeverages/order',[OrderFoodBeverageController::class, 'store'])->name('order-store');
+
+// Route::get('/profilenizam', [ProfileNizamController::class, 'index'])->name('profilenizam-index');
+// Route::put('/profilenizam/edit/{id}', [ProfileNizamController::class, 'update'])->name('profilenizam-update');
 
 require __DIR__.'/auth.php';

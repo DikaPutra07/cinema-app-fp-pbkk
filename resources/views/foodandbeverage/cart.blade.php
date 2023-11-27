@@ -10,7 +10,7 @@
     <section id="fnb-cart-empty" class="fnb-padding-1">
         <h3 class="my-2">Your cart is empty</h3>
         <span>Let's find something for you</span>
-        <a href="{{ route('foodandbeverages-index') }}" class="btn btn-light mt-2">Order Now</a>
+        <a href="{{ route('foodandbeverages-index') }}" class="btn btn-main mt-2">Order Now</a>
     </section>
 @else
     <section id="fnb-cart" class="fnb-padding-1">
@@ -66,6 +66,11 @@
                         </label>
                     @endforeach
                 </div>
+
+                <div class="fnb-card-number">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+                </div>
             </div>
 
             <div class="fnb-subtotal">
@@ -81,7 +86,7 @@
                         <input id="fnb-order-total" name="fnb-order-total" type="hidden">
                     </tr>
                 </table>
-                <button type="submit" class="btn btn-light mb-2">Proceed to Checkout</button>
+                <button type="submit" class="btn btn-main mb-2">Proceed to Checkout</button>
             </div>
         </form>
     </section>

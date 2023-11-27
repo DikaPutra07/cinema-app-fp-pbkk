@@ -14,7 +14,7 @@
     <h4 class="my-2">CineBites:</h4>
     <h1 class="my-2">Cinematic Bites,</h1>
     <h1 class="my-2">Theater Delights.</h1>
-    <a href="#fnb-category"><button class="my-2 btn btn-light">Look at Our Menu</button></a>
+    <a href="#fnb-category"><button class="my-2 btn btn-main">Look at Our Menu</button></a>
 </section>
 
 <section id="fnb-category" class="fnb-padding-1">
@@ -41,7 +41,7 @@
 <section id="fnb-banner-1" class="fnb-margin-1" style="background-image: url({{ asset('images/fnb/fnb-banner-1.jpg') }})">
     <h4 class="my-2">Cinema Crunch</h4>
     <h2 class="my-2">Checkout Our Popcorn Collection!</h2>
-    <a href="{{ route('foodandbeverages-categories', 2) }}"><button class="my-2 btn btn-light">ORDER NOW</button></a>
+    <a href="{{ route('foodandbeverages-categories', 2) }}"><button class="my-2 btn btn-main">ORDER NOW</button></a>
 </section>
 
 <section id="fnb-featured" class="fnb-padding-1">

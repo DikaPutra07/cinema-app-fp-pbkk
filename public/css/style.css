@@ -6039,17 +6039,17 @@ main .col-md-12:last-of-type .movie-list-2 {
 }
 
 #fnb-category .fnb-category-box h3{
-    color: #000;
+    color: #ffffff;
     /* color: white; */
     /* background-color: rgba(255, 255, 255, 0.2); */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.35);
     width: 100%;
     transition: 0.3s ease-in-out;
 }
 
 #fnb-category .fnb-category-box:hover h3{
-    /* color: rgb(48, 126, 44); */
-    color: white;
+    color: rgb(48, 126, 44);
+    /* color: white; */
 }
 
 #fnb-category .fnb-category-box:hover{
@@ -6357,6 +6357,26 @@ main .col-md-12:last-of-type .movie-list-2 {
 .fnb-payment-label input{
     margin: 0 5px;
 }
+
+.fnb-card-number {
+    margin-bottom: 20px;
+}
+
+.fnb-card-number label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.fnb-card-number input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e9e1;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
 
 #fnb-cart-bottom form .fnb-subtotal{
     width: 50%;
