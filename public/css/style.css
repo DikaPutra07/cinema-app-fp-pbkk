@@ -6358,6 +6358,10 @@ main .col-md-12:last-of-type .movie-list-2 {
     margin: 0 5px;
 }
 
+.fnb-payment-label span{
+    color: #000;
+}
+
 .fnb-card-number {
     margin-bottom: 20px;
 }
