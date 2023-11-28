@@ -66,14 +66,20 @@
                         </label>
                     @endforeach
                 </div>
-
-                <div class="fnb-card-number">
-                    <label for="card-number">Card Number</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
-                </div>
             </div>
 
             <div class="fnb-subtotal">
+                
+                <div class="fnb-card-number my-2">
+                    <label class="my-2" for="card-number">Card or Phone Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+                </div>
+
+                <div class="fnb-card-number my-2">
+                    <label class="my-2" for="card-number">Account's Name</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter your name" required>
+                </div>
+
                 <h4 class="my-2">Cart Totals</h3>
                 <table>
                     <tr>

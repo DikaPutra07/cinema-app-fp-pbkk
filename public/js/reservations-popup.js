@@ -136,9 +136,9 @@ function submit() {
         $('#reservation-form').serializeArray().map(function (x) { formData[x.name] = x.value; });
         console.log(formData);
         console.log(seatsIndex);
-        console.log(ShowId);
         $.post('/reservations', {
             _token: formData['_token'],
+            payment_id: formData['payment_id'],
             card_num: formData['card-num'],
             name: formData['name'],
             selected_seats: seatsIndex,
@@ -180,6 +180,10 @@ function validateForm() {
             $('#cvv-error').text('CVV can\'t be empty');
             return false;
         } else $('#cvv-error').text('');
+        if (formData['payment_id'] == null) {
+            $('#payment-id-error').text('Payment ID can\'t be empty');
+            return false;
+        } else $('#payment-id-error').text('');
         return true;
     }
 

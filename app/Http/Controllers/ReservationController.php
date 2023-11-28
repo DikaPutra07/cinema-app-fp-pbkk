@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use App\Models\Reservation;
 use App\Models\Show;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ class ReservationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'payment_id' => ['required', Rule::exists(Payment::class, 'id')], // 'exists:shows,id
             'show_id' => ['required', Rule::exists(Show::class, 'id')],
             'selected_seats' => ['array', 'required']
         ]);
@@ -20,7 +22,7 @@ class ReservationController extends Controller
             Reservation::create([
                 'show_id' => $request->show_id,
                 'user_id' => auth()->user()->id,
-                'payment_id' => 1,
+                'payment_id' => $request->payment_id,
                 'seat' => $seat,
             ]);
         }

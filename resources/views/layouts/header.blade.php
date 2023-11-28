@@ -39,9 +39,11 @@
                 <!-- ====== Start of Main Menu ====== -->
                 <ul class="navbar-nav mx-auto" id="main-menu">
                     <!-- Menu Item -->
+                    @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Ticket</a>
+                        <a class="nav-link" href={{ route('cart-index') }}>My Cart</a>
                     </li>
+                    @endauth
 
                     <!-- Menu Item -->
                     <li class="nav-item">
