@@ -35,7 +35,7 @@
             <div class="rating">
                 @include('components.rating-stars', ['rating' => $movie->rating])
             </div>
-            <span>{{ number_format(($movie->rating)/0.5, 1) }}/5</span>
+            <span>{{ number_format(($movie->rating)*0.5, 1) }}/5</span>
         </div>
         <!-- End of Rating -->
 

@@ -19,6 +19,9 @@
                     aria-labelledby="v-pills-reservations-tab">
                     @include('profile.reservations')
                 </div>
+                @manager
+                {{--  --}}
+                @endmanager
             </div>
         </div>
     </div>

@@ -72,12 +72,12 @@
                 
                 <div class="fnb-card-number my-2">
                     <label class="my-2" for="card-number">Card or Phone Number</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+                    <input type="text" id="card-number" name="card_number" placeholder="Enter your card number" required>
                 </div>
 
                 <div class="fnb-card-number my-2">
                     <label class="my-2" for="card-number">Account's Name</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Enter your name" required>
+                    <input type="text" id="card-name" name="card_name" placeholder="Enter your name" required>
                 </div>
 
                 <h4 class="my-2">Cart Totals</h3>

@@ -12,6 +12,8 @@ class OrderFoodBeverage extends Model
     protected $fillable = [
         'user_id',
         'payment_id',
+        'payment_number',
+        'payment_account',
         'total',
         'time'
     ];

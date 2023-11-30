@@ -139,8 +139,8 @@ function submit() {
         $.post('/reservations', {
             _token: formData['_token'],
             payment_id: formData['payment_id'],
-            card_num: formData['card-num'],
-            name: formData['name'],
+            payment_number: formData['card_number'],
+            payment_account: formData['card_name'],
             selected_seats: seatsIndex,
             show_id: ShowId
         })

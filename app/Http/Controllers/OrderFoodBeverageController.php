@@ -16,10 +16,14 @@ class OrderFoodBeverageController extends Controller
         $request->validate([
             'fnb-order-payment' => 'required|numeric|exists:payments,id',
             'fnb-order-total' => 'required|numeric',
+            'card_number' => 'required',
+            'card_name' => 'required',
         ]);
 
         $validated['user_id'] = auth()->user()->id;
         $validated['payment_id'] = $request->input('fnb-order-payment');
+        $validated['payment_number'] = $request->input('card_number');
+        $validated['payment_account'] = $request->input('card_name');
         $validated['total'] = $request->input('fnb-order-total');
         $validated['time'] = now();
 
