@@ -14,6 +14,8 @@ class ReservationController extends Controller
     {
         $request->validate([
             'payment_id' => ['required', Rule::exists(Payment::class, 'id')], // 'exists:shows,id
+            'payment_number' => 'required',
+            'payment_account' => 'required',
             'show_id' => ['required', Rule::exists(Show::class, 'id')],
             'selected_seats' => ['array', 'required']
         ]);
@@ -23,6 +25,8 @@ class ReservationController extends Controller
                 'show_id' => $request->show_id,
                 'user_id' => auth()->user()->id,
                 'payment_id' => $request->payment_id,
+                'payment_number' => $request->payment_number,
+                'payment_account' => $request->payment_account,
                 'seat' => $seat,
             ]);
         }

@@ -13,6 +13,8 @@ class Reservation extends Model
         'show_id',
         'user_id',
         'payment_id',
+        'payment_number',
+        'payment_account',
         'seat'
     ];
 

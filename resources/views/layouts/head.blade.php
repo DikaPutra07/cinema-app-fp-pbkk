@@ -11,7 +11,7 @@
     <meta name="author" content="zoz">
 
     <!-- ===== Website Title ===== -->
-    <title>{{ config('app.name') }}</title>
+    <title>Cinema XX11</title>
 
     <!-- ===== Favicon ===== -->
     <link rel="shortcut icon" href={{ asset('images/branding/logos/favicon.png') }} type="image/x-icon">

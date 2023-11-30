@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('payment_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('payment_number');
+            $table->string('payment_account');
             $table->timestamp('time');
             $table->integer('total');
             $table->timestamps();
