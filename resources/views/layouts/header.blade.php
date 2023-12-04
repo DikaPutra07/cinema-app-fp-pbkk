@@ -97,8 +97,8 @@
                             </a>
                             <div class="dropdown-content rounded font-weight-normal">
                                 <a href="{{ route('profilenizam-index') }}">My Account</a>
-                                <a href="#">My Ticket</a>
-                                <form id="logout_form" method="POST" action="logout
+                                <a href="{{ route('profilenizam-index') }}">My Ticket</a>
+                                <form id="logout_form" method="POST" action="{{ route('logout') }}
                                 ">
                                     @csrf
                                     <a href="javascript:{}" onclick="document.getElementById('logout_form').submit();">Log

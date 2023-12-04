@@ -36,8 +36,15 @@ class RegisteredUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'role' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        $isManager = 1;
+
+        if($request->role == 'customer'){
+            $isManager = 0;
+        }
 
         $user = User::create([
             'username' => $request->username,
@@ -45,6 +52,7 @@ class RegisteredUserController extends Controller
             'last_name' => $request->last_name,
             'phone' => $request->phone,
             'email' => $request->email,
+            'isManager' => $isManager,
             'password' => Hash::make($request->password),
         ]);
 

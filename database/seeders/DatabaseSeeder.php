@@ -23,18 +23,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {   
-        User::create([
-            'username' => 'admin',
-            'first_name' => 'admin',
-            'last_name' => 'admin',
-            'phone' => '123456789',
-            'email' => 'admin@email.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('admin'),
-            'remember_token' => Str::random(10),
-        ]);
+        // User::create([
+        //     'username' => 'admin',
+        //     'first_name' => 'admin',
+        //     'last_name' => 'admin',
+        //     'phone' => '123456789',
+        //     'email' => 'admin@email.com',
+        //     'email_verified_at' => now(),
+        //     'password' => bcrypt('admin'),
+        //     'remember_token' => Str::random(10),
+        // ]);
 
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
         function createGenre(){
             Genre::create(['name' => 'Action']);

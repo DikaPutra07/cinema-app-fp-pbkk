@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\FoodBeverage;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -22,10 +23,24 @@ class ProfileController extends Controller
     public function index()
     {   
         $user = auth()->user();
-        return view('profile.user-dashboard', [
-            'user' => $user,
-            'reservations' => Reservation::where('user_id', $user->id)->get()
-        ]);
+        $manager = $user->isManager;
+        $foodBeverages = FoodBeverage::all()->collect();
+
+        if($manager){
+            return view('profile.user-dashboard', [
+                'user' => $user,
+                'manager' => $manager,
+                'foodBeverages' => $foodBeverages,
+                'reservations' => Reservation::all()
+            ]);
+        }
+        else{
+            return view('profile.user-dashboard', [
+                'user' => $user,
+                'manager' => $manager,
+                'reservations' => Reservation::where('user_id', $user->id)->get()
+            ]);
+        }
     }
 
     public function edit(Request $request): View

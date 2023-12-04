@@ -20,7 +20,6 @@
                     <th>{{ $reservation->show->studio->id }}</th>
                     <td>{{ $reservation->seat }}</td>
                     <td>{{ $reservation->show->price . ' ' . config('app.currency') }}</td>
-                    @if ($reservation->show->date > Carbon\Carbon::now()->add(3, 'hour'))
                         <td class="disabled">
                             <form action="{{ route('reservation-destroy', $reservation->id) }}" method="POST">
                                 @csrf
@@ -28,7 +27,6 @@
                                 <input class="btn btn-second text-white" type="submit" value="Cancel Reservation">
                             </form>
                         </td>
-                    @endif
                 </tr>
             @endforeach
         </table>

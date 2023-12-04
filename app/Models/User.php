@@ -25,6 +25,7 @@ class User extends Authenticatable
         'email_verified_at',
         'password',
         'phone',
+        'isManager'
     ];
 
     /**
@@ -46,6 +47,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isManager()
+    {
+        return $this->isManager ? true : false;
+    }
 
     public function reservations()
     {
