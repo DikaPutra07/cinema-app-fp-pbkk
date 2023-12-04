@@ -63,6 +63,11 @@ Route::controller(FoodBeverageController::class)->group(function () {
     Route::get('/foodandbeverages', 'index')->name('foodandbeverages-index');
     Route::get('/foodandbeverages/category/{category}', 'categories')->name('foodandbeverages-categories');
     Route::get('/foodandbeverages/detail/{fnb}', 'detail')->name('foodandbeverages-detail');
+    Route::delete('/foodandbeverages/delete/{fnb}', 'destroy')->name('foodandbeverages-destroy');
+    Route::patch('/foodandbeverages/edit/{fnb}', 'update')->name('foodandbeverages-update');
+    Route::get('/foodandbeverages/edit/{fnb}', 'edit')->name('foodandbeverages-edit');
+    Route::get('/foodandbeverages/create', 'create')->name('foodandbeverages-create');
+    Route::post('/foodandbeverages', 'store')->name('foodandbeverages-store');
 });
 
 Route::controller(CartController::class)->group(function () {
