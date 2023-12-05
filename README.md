@@ -9,3 +9,6 @@ Cinema XXII adalah sistem ticketing bioskop yang dibuat dengan tujuan untuk meme
 
 # Video Demo
 [Cinema XXII](https://youtu.be/G2u-G93R1Pc)
+
+Tambahan poin yang tidak dijelaskan di video:
+- Fitur riwayat transaksi Food & Beverages beserta detailnya
