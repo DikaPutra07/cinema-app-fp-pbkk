@@ -33,8 +33,8 @@ class ProfileController extends Controller
                 'user' => $user,
                 'manager' => $manager,
                 'foodBeverages' => $foodBeverages,
-                'reservations' => Reservation::all(),
-                'orders' => OrderFoodBeverage::all()
+                'reservations' => Reservation::where('user_id', $user->id)->get(),
+                'orders' => OrderFoodBeverage::where('user_id', $user->id)->get()
             ]);
         }
         else{
