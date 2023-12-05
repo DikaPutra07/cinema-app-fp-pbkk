@@ -7,6 +7,8 @@
                     role="tab" aria-controls="v-pills-account" aria-selected="true">My Account</a>
                 <a class="nav-link" id="v-pills-reservations-tab" data-toggle="pill" href="#v-pills-reservations"
                     role="tab" aria-controls="v-pills-reservations" aria-selected="false">My Reservations</a>
+                <a class="nav-link" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders"
+                    role="tab" aria-controls="v-pills-orders" aria-selected="false">My Orders</a>
                 @if($manager === 1)
                     <a class="nav-link" id="v-pills-foodandbeverages-tab" data-toggle="pill" href="#v-pills-foodandbeverages"
                         role="tab" aria-controls="v-pills-foodandbeverages" aria-selected="false">My Food and Beverages</a>
@@ -22,6 +24,10 @@
                 <div class="tab-pane fade" id="v-pills-reservations" role="tabpanel"
                     aria-labelledby="v-pills-reservations-tab">
                     @include('profile.reservations')
+                </div>
+                <div class="tab-pane fade" id="v-pills-orders" role="tabpanel"
+                    aria-labelledby="v-pills-orders-tab">
+                    @include('profile.orders')
                 </div>
                 @if($manager === 1)
                     <div class="tab-pane fade" id="v-pills-foodandbeverages" role="tabpanel"

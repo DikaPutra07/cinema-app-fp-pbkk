@@ -1,3 +1,4 @@
+// cart
 let table = document.getElementById('fnb-cart-table');
 // Subtotal
 for (let i = 1; i < table.rows.length; i++) {

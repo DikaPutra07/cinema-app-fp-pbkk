@@ -106,7 +106,7 @@
                                     </thead>
                                     @foreach ($shows as $show)
                                         <tr class="{{ $show->remaining_seats < 5 ? 'table-danger' : '' }}">
-                                            <th>{{ date('d/m/Y', strtotime($movie->release_date)) }}</th>
+                                            <th>{{ date('d/m/Y', strtotime($show->date)) }}</th>
                                             <td>{{ $show->studio->name }}</td>
                                             <th>{{ $show->start_time }}</th>
                                             <td>{{ $show->price . ' ' . config('app.currency') }}

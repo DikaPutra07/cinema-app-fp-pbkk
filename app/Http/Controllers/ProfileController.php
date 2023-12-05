@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\OrderFoodBeverage;
+use App\Models\OrderFoodBeverageDetails;
 
 use function Laravel\Prompts\error;
 
@@ -31,14 +33,16 @@ class ProfileController extends Controller
                 'user' => $user,
                 'manager' => $manager,
                 'foodBeverages' => $foodBeverages,
-                'reservations' => Reservation::all()
+                'reservations' => Reservation::all(),
+                'orders' => OrderFoodBeverage::all()
             ]);
         }
         else{
             return view('profile.user-dashboard', [
                 'user' => $user,
                 'manager' => $manager,
-                'reservations' => Reservation::where('user_id', $user->id)->get()
+                'reservations' => Reservation::where('user_id', $user->id)->get(),
+                'orders' => OrderFoodBeverage::where('user_id', $user->id)->get()
             ]);
         }
     }
@@ -72,4 +76,12 @@ class ProfileController extends Controller
             return redirect()->route('profilenizam-index');
     }
     
+    public function orderDetails($id){
+        $orderdetails = OrderFoodBeverageDetails::where('order_food_beverage_id', $id)->get();
+        $foodBeverages = FoodBeverage::all()->collect();
+        return view('profile.order-details', [
+            'orderdetails' => $orderdetails,
+            'foodBeverages' => $foodBeverages,
+        ]);
+    }
 }
