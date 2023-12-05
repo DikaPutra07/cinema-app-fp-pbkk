@@ -6449,3 +6449,47 @@ html {
     flex-direction: column;
     height: 50vh;
 }
+
+#profile-orderdetails table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#profile-orderdetails table img{
+    width: 70px;
+}
+
+#profile-orderdetails table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#profile-orderdetails table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+}
+
+#profile-orderdetails table tbody tr td{
+    padding-top: 15px;
+}
+
+#profile-orderdetails table td:nth-child(1){
+    width: 150px;
+    text-align: center;
+}
+
+#profile-orderdetails table td:nth-child(2){
+    width: 250px;
+    text-align: center;
+}
+
+#profile-orderdetails table td:nth-child(3),
+#profile-orderdetails table td:nth-child(4),
+#profile-orderdetails table td:nth-child(5){
+    width: 150px;
+    text-align: center;
+}

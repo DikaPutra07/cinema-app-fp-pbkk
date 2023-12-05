@@ -14,6 +14,7 @@
 <script src={{  asset('js/custom.js')  }}></script>
 <script src={{  asset('js/fnb.js')  }}></script>
 <script src={{  asset('js/toast.js')  }}></script>
+<script src={{ asset('js/profile-order-details.js') }}></script>
 
 <!-- ===== Slider Revolution core JavaScript files ===== -->
 <script type="text/javascript" src={{  asset('revolution/js/jquery.themepunch.tools.min.js')  }}></script>
