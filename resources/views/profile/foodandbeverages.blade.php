@@ -6,7 +6,6 @@
 
     <br><br>
 
-    @if ($reservations->isNotEmpty())
         <table class="table table-responsive table-striped table-hover">
             <thead class="thead-dark">
                 <tr>
@@ -42,9 +41,4 @@
                 </tr>
             @endforeach
         </table>
-    @else
-        <div class="bg-light p-3 font-weight-bold rounded text-center">
-            You don't have any future reservations.
-        </div>
-    @endif
 </div>
